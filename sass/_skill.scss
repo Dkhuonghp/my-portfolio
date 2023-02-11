@@ -1,0 +1,215 @@
+.skill {
+    .wrapper {
+        font-size: 14px;
+        background: #141523;
+        // box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+        width: 100%;
+        margin: 10% 0;
+        position:relative;
+        border-radius:0.7rem ;
+        z-index: 3;
+        background-image:url("https://readyplayer.me/images/home/glow-purple-01.svg");
+        background-repeat:no-repeat;
+        background-position: -200px 0,right bottom;
+    }
+    .profile {
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
+        position: relative;
+        
+    }
+    .iconWrap {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: 2%;
+        .icon {
+            transition: .2s;
+            &:hover {
+                transform: scale(2);
+            }
+        }
+        .iconBtn1 {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: #ef4444;
+            
+        }
+        .iconBtn2 {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: #f59e0b;
+            margin: 0 15px;
+        }
+        .iconBtn3 {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background: #2aca3e;
+        }
+    }
+    .container-code {
+        font-family: Menlo, Monaco, "Courier New", monospace;
+        width: 100%;
+        z-index: 3;
+    }
+    .codeWrap {
+        position: relative;
+        line-height: 1.7em;
+        width: 100%;
+        word-wrap: break-word;
+    }
+    .codeWrap:hover {
+        background: #2b2e3e;
+        cursor: default;
+    }
+    .codeWrap::before {
+        content: attr(data-value);
+        position: absolute;
+        display: block;
+        width: 20px;
+        left: 1%;
+        margin: auto;
+        font-size: 14px;
+        text-align: center;
+        color: #6272a4;
+    }
+    .brackets {
+        color: white;
+    }
+    .barackets::after {
+        content: "{";
+        color: rgb(199, 146, 234);
+    }
+    .barackets_2 {
+        color: #fff;
+    }
+    .barackets_3::after {
+        content: "}";
+        color: rgb(199, 146, 234);
+    }
+    .barackets_4::after {
+        content: "(";
+        color: rgb(199, 146, 234);
+        
+    }
+    .barackets_5::after {
+        content: ")";
+        color: rgb(199, 146, 234);
+        
+    }
+    .string::after {
+        content: ";";
+        color: #fff;
+        margin-left: 6px;
+    }
+    
+    .code {
+        width: 1140px;
+        margin: 0 auto;
+    }
+    .code.left {
+        margin-left: 9%;
+    }
+    .left_2 {
+        margin-left: 6%;
+    }
+    .code.left-2 {
+        margin-left: 12%;
+    }
+    .code.left-3 {
+        margin-left: 6%;
+    }
+    // .code.flex {
+    //     display: flex;
+    // }
+    
+    .mtk1 {
+        &::after{
+            content: '[';
+            color: #179fff;
+        }
+    }
+    .mtk2 {
+        &::after{
+            content: ']';
+            color: #179fff;
+        }
+    }
+    
+    .mtk15 {
+        color: #ff6bcb;
+    }
+    .mtk18 {
+        color: #82aaff;
+    }
+    .mtk14 {
+        color: #eac394;
+        
+    }
+    .mtk14 {
+        color: #e0af68;
+    }
+    .number {
+        color: #ff78f8;
+    }
+    .mtk5 {
+        color: #20e3b2;
+    }
+    
+    .bracket-highlighting-left-0::after {
+        content: '{';
+        color: #ffd700;
+    
+    }
+    .bracket-highlighting-right-0::after {
+        content: '}';
+        color: #ffd700;
+    
+    }
+    .bracket-highlighting-left-1::after {
+        content: '{';
+        color: #da70d6;
+    
+    }
+    .bracket-highlighting-right-1::after {
+        content: '}';
+        color: #da70d6;
+    }
+    .static {
+        color: #9d7cd8;
+        margin-right: 6px;
+    }
+    .mtk3 {
+        color: #bd93f9;
+        &.mtki {
+            font-style: italic;
+        }
+    }
+    
+    .typed {
+        border: 1px solid #bd93f9;
+        margin: 0 6px;
+        animation: animate 0.7s infinite;
+    }
+    
+}
+
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,44 @@
+/* Hero section -------------------------------- */
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    .hero-wrapper{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .hero-main{
+        position: absolute;
+        bottom: 168px;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        padding-left: 4%;
+        color: var(--color-text);
+    }
+    
+    .hero-second{
+        color: var(--color-text);
+    }
+    
+    .hero-main-title{
+        font-size: 48px;
+        color: var(--color-text);
+    }
+    
+    .hero-main-description{
+        font-size: 48px;
+        color: var(--color-text);
+        font-weight: bold;
+        margin: 1% 0;
+    }
+    
+    .hero-second-subheading{
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 32px;
+        color: rgba(152,142,159, 1);
+    }
+}

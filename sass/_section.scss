@@ -1,0 +1,95 @@
+/* Section Formatting --------------------------------------------- */
+
+.section-margin{
+    height: 2000px;
+    width: 100%;
+}
+.section-text{
+    line-height: 2;
+    margin-top: 18px;
+    font-size: 16px;
+    color: var(--color-text);
+}
+.section{
+        position: relative;
+        width: 50%;
+        padding: 200px 4% 300px 4%;
+        margin: 0;
+        background-color: var(--color-background);
+        overflow: hidden;
+    &.left{
+        margin-right: auto;
+        border-top-right-radius: 700px 700px;
+        border-bottom-right-radius: 0px 0px;
+    }
+    &.right{
+        margin-left: auto;
+        border-top-left-radius: 700px 700px;
+        border-bottom-left-radius: 0px 0px;
+    }
+}
+
+/* Sections -------------- */
+section {
+
+    .section-intro-wrapper{
+        position: relative;
+        &.pink-border {
+            border-bottom: 2px solid var(--color-pink);
+        }
+        .section-title{
+            position: relative;
+            &.green-text.green-border{
+                color: var(--color-green);
+                border-bottom: 2px solid var(--color-green);
+            }
+            &.blue-text.blue-border{
+                color: var(--color-blue);
+                border-bottom: 2px solid var(--color-blue);
+            }
+            .section-title-text {
+                display: block;
+                font-size: 40px;
+                font-weight: 500;
+                z-index: 5;
+                color: var(--color-pink);
+                &.color-brown {
+                    color: #e0af68;
+                    border-bottom: 2px solid var(--color-brown);
+                }
+                &.pink {
+                    color: #f667c3;
+                    border-bottom: 2px solid #f667c3;
+                }
+                
+                &.green-text{
+                    color: var(--color-green)
+                }
+                &.blue-text {
+                    color: var(--color-blue);
+                }
+                
+            }
+        }
+        .section-number{
+            position: absolute;
+            bottom: 15px;
+            right: 0;
+            color: var(--color-pink);
+            font-size: 24px;
+        }
+    }
+    .section-detail-wrapper{
+        position: relative;
+        padding: 20% 0;
+    }
+}
+
+
+
+.blue-background{
+    background-color: var(--color-blue);
+}
+.green-background{
+    background-color: var(--color-green);
+}

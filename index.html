@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/img/logo.svg" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body class="light-theme">
+
+    <div class="experience">
+        <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-wrapper">
+            <div class="loading">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" asscroll-container>
+        <div class="toggle-bar">
+            <div class="pusheen-newsletter"></div>
+            <div class="sun-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"/></svg>
+            </div>
+            <button class="toggle-button">
+                <div class="toggle-circle"></div>
+            </button>
+            <div class="moon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"/></svg>
+            </div>
+        </div>
+        
+        <div class="page-wrapper" asscroll>
+            <section class="hero">
+                <div class="hero-wrapper">
+                <!-- Intro Stuff -->
+                <div class="intro-text">Welcome to my portfolio!</div>
+                <div class="arrow-svg-wrapper">
+                    <p>scroll</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"/></svg>
+                </div>
+
+                <div class="hero-main">
+                    <h1 class="hero-main-title">
+                        <p>Hi, I'm Khuong</p>
+                    </h1>
+                    <p class="hero-main-description">Front End Developer</p>
+                    <div class="hero-second">
+                        <p class="hero-second-subheading first-sub">I want you to know about me.</p>
+                        <div class="hero-second-subheading second-sub"></div>
+                    </div>
+                </div>
+
+
+                </div>
+            </section>
+
+            <div class="first-move section-margin"></div>
+
+            <!--! About -->
+            <section class="first-section section left">
+                <div class="about-pusheen">
+                    <img src="/img/about-pusheen.webp" alt="">
+                </div>
+                <div class="section-intro-wrapper pink-border">
+                    <h1 class="section-title pink-text pink-border">
+                        <span class="section-title-text pink-text">About me</span>
+                    </h1>
+                </div>
+                
+                <div class="about">
+                    <img src="./img/avatar.jpg" alt="">
+                    
+                    <p class="mt about-title section-text">ECCコンピュータ専門学校マルチメディア研究学科WEBデザイン専攻3年</p>
+                    <p class="mt about-name section-text">NGUYEN DUY KHUONG</p>
+                    <p class="mt about-content section-text">
+                        私のアピールポイントは行動力と粘り強さです。<br>
+                        専門学校へ入学した当初は、プログラミングの経験がなく全くできませんでした。 そこで、弱点を克服するために、
+                        毎日課題の復習と他の言語化にチャレンジし、 放課後先生に教えていただいたり、ネット等を活用して
+                        自習勉強をした結果、 小さなアプリや色々なWebサイトを作成することができるようになりました。<br>
+                        今では自分の作りたいものを形にできるプログラミングが特に好きです。<br>
+                        Webサイトの構築を中心に知識を広げたり、フロントエンド開発で実装の経験を重ねて技術を磨きたいと思っており、
+                        フロントと関わりのある技術も、自主的に勉強しています。<br>
+                        貴社入社後も、新しい技術や知識を積極的に身に付け、業務に活かしていきます。
+                    </p>
+                    <p class="mt about-name section-text">将来の目標</p>
+                    <p class="mt about-content section-text">
+                        将来の目標はフロントエンジニアとして貴社に貢献したいと思っております。<br>
+                        プロジェクトを成功させるためには、私はWebサイトの構築だけでなく、
+                        様々な言語化の基礎スキルにチャレンジし、フロントエンド開発で実装の経験を重ねて技術を磨きたいと思っております。<br>
+                        また、プロジェクトの成功には周囲の協力が必要不可欠なため、
+                        貴社に入社出来ましたら先輩、同期とわず積極的にコミュニケーションを取って関係構築をはかりたいと思っております。
+                    </p>
+                </div>
+            </section>
+            
+            <div class="second-move section-margin"></div>
+
+            <!--! Education -->
+            <section class="second-section section right">
+                <div class="section-intro-wrapper">
+                    <h1 class="section-title">
+                        <span class="section-title-text pink">Education</span>
+                    </h1>
+                    <span class="section-number pink">02</span>
+                </div>
+
+                <div class="qualification">
+                    <div class="qualification__container grid section-text">
+                        <div class="education">
+                            <!-- !学歴 -->
+                            <h3 class="qualification__title blue-text">
+                                <i class="uil uil-suitcase"></i>
+                                学歴
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="circle__dot"></div>
+                                    <h3 class="timeline__title">2012-05 ~ 2015-09</h3>
+                                    <p class="timeline__text">越南 高校</p>
+                                </div>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="circle__dot"></div>
+                                    <h3 class="timeline__title">2016-04 ~ 2018-03</h3>
+                                    <p class="timeline__text">新亜国際言語学院</p>
+                                </div>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="circle__dot"></div>
+                                    <h3 class="timeline__title">2018-04 ~ 2020-03</h3>
+                                    <p class="timeline__text">大阪観光ビジネス学院</p>
+                                </div>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="circle__dot"></div>
+                                    <h3 class="timeline__title">2020-04 ~ 2023-03</h3>
+                                    <p class="timeline__text">ECCコンピュータ専門学校マルチメディア研究学科WEBデザインコース</p>
+                                </div>
+                            </div>
+                            <!-- !受賞歴  -->
+                            <h3 class="qualification__title">
+                                <i class="uil uil-suitcase"></i>
+                                受賞歴 
+                            </h3>
+        
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <p class="timeline__text">
+                                        2年生の時、株式会社ソフタスからプロジェクトを受け取り、作成した結果、デザイン優秀賞を受賞しました。
+                                    </p>
+                                    <li><a href="https://it19.vercel.app/" target="_blank">Web link : https://it19.vercel.app/</a></li>
+                                </div>
+                            </div>
+                            <!-- !　インターンシップ -->
+                            <h3 class="qualification__title">
+                                <i class="uil uil-suitcase"></i>
+                                インターンシップ
+                            </h3>
+        
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <p class="timeline__text">
+                                        2022年8月から 株式会社VALT にてフロントエンドエンジニアとして短期インターンしています。
+                                        HTML, CSS, JavaScriptを使用しwebアプリを作成しています。
+                                    </p>
+                                </div>
+                            </div>
+        
+                            <!-- ! 現在していること-->
+                            <h3 class="qualification__title">
+                                <i class="uil uil-suitcase"></i>
+                                現在していること
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <div class="circle__dot"></div>
+                                    <h3 class="timeline__title"></h3>
+                                    <p class="timeline__text">
+                                        フロントの領域を中心に勉強しており、最近は作れるものの幅を広げる為にフロントと関わりのある技術も勉強しています。
+                                        現在、チーム制作ではプレゼントを贈れるアプリを作成中です。その中でコミュニーケーションとスケジュール管理能力を学ぶことができました。
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- ! Frontend developer -->
+                            <h3 class="qualification__title">
+                                Frontend developer
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <p class="timeline__text">専門学校でWebプログラマーとしての基礎を学んでいます。言語は「HTML5, CSS, JavaScript, TypeScript, SCSS, React.js, Tailwindcss」、ツールはと「Visual StudioCode, Github」を主に用いて作品をしております。</p>
+                                </div>
+                            </div>
+                            <!-- ! Design -->
+                            <h3 class="qualification__title">
+                                Design
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <p class="timeline__text">私が「Illustrator, Figma, Photoshop, AfterEffects」などのアプリケーションを用いたデザインの制作です。Webデザインの仕事の中でデザインを扱えることは必要とされるシーンによって多彩な表現ができることを目指してスキルアップの勉強をしております。</p>
+                                </div>
+                            </div>
+                            <!-- ! UX/UI -->
+                            <h3 class="qualification__title">
+                                UX/UI
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <p class="timeline__text">私がいろいろな視点でWEBページを考察し、自ら組み立てていけるようなWEBデザイナーとしてスキルアップしていきたいと考えております。</p>
+                                </div>
+                            </div>
+                            <!-- ! Animation -->
+                            <h3 class="qualification__title">
+                                Animation
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline__item">
+                                    <p class="timeline__text">重要な要素を動かすことで興味を引かせたり、飽きずに読み進めてもらうためのきっかけになったり、私が色々なアニメーションを勉強しております。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="second-move section-margin"></div>
+            <!--! Skill -->
+            <section class="skill section left">
+                <div class="section-intro-wrapper blue-text blue-border">
+                    <h1 class="section-title blue-text blue-border">
+                        <span class="section-title-text blue-text">Skill</span>
+                    </h1>
+                    <!-- <span class="section-number blue-text">03</span> -->
+                </div>
+                <div class="wrapper">
+                    <div class="profile"> 
+                        <div class="iconWrap">
+
+                            <div class="icon iconBtn1"></div>
+                            <div class="icon iconBtn2"></div>
+                            <div class="icon iconBtn3"></div>
+
+                        </div>
+                        <div class="container-code">
+                            <p class="codeWrap" data-value="1">
+                                <span class="code left-3">
+                                    <span class="mtk15">class</span>
+                                    <span class="mtk18">User</span>
+                                    <span class="bracket-highlighting-left-0"></span>
+        
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="2">
+                                <span class="code left">
+                                    <span class="mtk15">constructor</span>
+                                    <span class="barackets_4"></span>
+                                    <span class="barackets_5"></span>
+                                    <span class="bracket-highlighting-left-1"></span>
+        
+                                </span>
+                            </p>
+                            <div class="user">
+                                <p class="codeWrap" data-value="3">
+                                    <span class="code left-2">
+                                        <span class="mtk3 mtki">this</span>
+                                        <span class="brackets">.</span>
+                                        <span class="mtk18">name</span>
+                                        <span class="barackets_2">=</span>
+                                        <span class="mtk14">"Nguyen Duy Khuong"</span>
+                                    </span>
+                                </p>
+                                <p class="codeWrap" data-value="4">
+                                    <span class="code left-2">
+                                        <span class="mtk3 mtki">this</span>
+                                        <span class="brackets">.</span>
+                                        <span class="mtk18">birthday</span>
+                                        <span class="barackets_2">=</span>
+                                        <span class="mtk14">"1997年1月13日"</span>
+                                    </span>
+                                </p>
+                                <p class="codeWrap" data-value="5">
+                                    <span class="code left-2">
+                                        <span class="mtk3 mtki">this</span>
+                                        <span class="brackets">.</span>
+                                        <span class="mtk18">age</span>
+                                        <span class="barackets_2">=</span>
+                                        <span class="mtk14">"26"</span>
+                                    </span>
+                                </p>
+                                <p class="codeWrap" data-value="6">
+                                    <span class="code left-2">
+                                        <span class="mtk3 mtki">this</span>
+                                        <span class="brackets">.</span>
+                                        <span class="mtk18">country</span>
+                                        <span class="barackets_2">=</span>
+                                        <span class="mtk14">"Viet Nam"</span>
+                                    </span>
+                                </p>
+                                <p class="codeWrap" data-value="7">
+                                    <span class="code left-2">
+                                        <span class="mtk3 mtki">this</span>
+                                        <span class="brackets">.</span>
+                                        <span class="mtk18">school</span>
+                                        <span class="barackets_2">=</span>
+                                        <span class="mtk14">"ECC computer"</span>
+                                    </span>
+                                </p>
+                            </div>
+                            <p class="codeWrap" data-value="8">
+                                <span class="code left">
+                                    <span class="bracket-highlighting-right-1"></span>
+                                </span>
+        
+                            </p>
+                            <p class="codeWrap" data-value="9">
+                                <span class="code flex left">
+                                    <span class="mtk5">frontEnd</span>
+                                    <span class="barackets_4"></span>
+                                    <span class="barackets_5"></span>
+                                    <span class="bracket-highlighting-left-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="10">
+                                <span class="code left-2 flex">
+                                    <span class='mtk15'>return</span>
+                                    <span class="mtk14">
+                                        <span class='mtk1'></span>
+                                            "HTML", "CSS", "JavaScript", "Sass", "Reactjs", "Threejs"
+                                        <span class='mtk2'></span>
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="11">
+                                <span class="code left">
+                                    <span class="bracket-highlighting-right-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="12">
+                                <span class="code flex left">
+                                <span class="mtk5">backEnd</span>
+                                    <span class="barackets_4"></span>
+                                    <span class="barackets_5"></span>
+                                    <span class="bracket-highlighting-left-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="13">
+                                <span class="code left-2 flex">
+                                    <span class='mtk15'>return</span>
+                                    <span class="mtk14">
+                                        <span class='mtk1'></span>
+                                            "FireBase", "Mongodb", "Nodejs"
+                                        <span class='mtk2'></span>
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="14">
+                                <span class="code left">
+                                    <span class="bracket-highlighting-right-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="15">
+                                <span class="code flex left">
+                                <span class="mtk5">iosDeveloper</span>
+                                    <span class="barackets_4"></span>
+                                    <span class="barackets_5"></span>
+                                    <span class="bracket-highlighting-left-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="16">
+                                <span class="code left-2 flex">
+                                    <span class='mtk15'>return</span>
+                                    <span class="mtk14">
+                                        <span class='mtk1'></span>
+                                            "Swift"
+                                        <span class='mtk2'></span>
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="17">
+                                <span class="code left">
+                                    <span class="bracket-highlighting-right-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="18">
+                                <span class="code flex left">
+                                <span class="mtk5">tools</span>
+                                    <span class="barackets_4"></span>
+                                    <span class="barackets_5"></span>
+                                    <span class="bracket-highlighting-left-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="19">
+                                <span class="code left-2 flex">
+                                    <span class='mtk15'>return</span>
+                                    <span class="mtk14">
+                                        <span class='mtk1'></span>
+                                            "Visual Studio Code", "Xcode", "Github"
+                                        <span class='mtk2'></span>
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="20">
+                                <span class="code left">
+                                    <span class="bracket-highlighting-right-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="21">
+                                <span class="code flex left">
+                                <span class="mtk5">design</span>
+                                    <span class="barackets_4"></span>
+                                    <span class="barackets_5"></span>
+                                    <span class="bracket-highlighting-left-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="22">
+                                <span class="code left-2 flex">
+                                    <span class='mtk15'>return</span>
+                                    <span class="mtk14">
+                                        <span class='mtk1'></span>
+                                            "Photoshop", "Illustrator", "XD" 
+                                        <span class='mtk2'></span>
+                                    </span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="23">
+                                <span class="code left">
+                                    <span class="bracket-highlighting-right-1"></span>
+                                </span>
+                            </p>
+                            <p class="codeWrap" data-value="24">
+                                <span class="code left_2">
+                                    <span class="bracket-highlighting-right-0"></span>
+                                    <span class='typed'></span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <div class="second-move section-margin"></div>
+            <!-- ! Works -->
+            <section class="second-section section right">
+
+                <div class="section-intro-wrapper">
+                <h1 class="section-title color-brown">
+                    <span class="section-title-text color-brown">My Work</span>
+                </h1>
+                <!-- <span class="section-number blue-text">04</span> -->
+                </div>
+
+                <div class="works"></div>
+
+            </section>
+
+            <div class="third-move section-margin"></div>
+
+            <section class="third-section section left">
+                <div class="section-intro-wrapper green-text green-border">
+                <h1 class="section-title green-text green-border">
+                    <span class="section-title-text green-text">Contact Me</span>
+                </h1>
+                <!-- <span class="section-number green-text">05</span> -->
+                </div>
+                <div class="container">
+                    <img src="https://pusheen.com/wp-content/uploads/2019/02/Im-Busy.gif" alt="">
+                    <form action="">
+                        <label for="fname">お問い合わせ内容</label>
+                        <input type="text" id="content" name="content" placeholder="お問い合わせ内容">
+                        <label for="fname">お名前</label>
+                        <input type="text" id="name" name="name" placeholder="お名前">
+
+                        <label for="lname">フリガナ</label>
+                        <input type="text" id="furigana" name="furigana" placeholder="フリガナ">
+
+                        <label for="country">性別</label>
+                        <select id="country" name="country">
+                            <option value="australia">男性</option>
+                            <option value="canada">女性</option>
+                            <option value="usa">回答なし</option>
+                        </select>
+
+                        <label for="fname">メールアドレス</label>
+                        <input type="text" id="mail" name="mail" placeholder="メールアドレス">
+
+                        <label for="lname">電話番号</label>
+                        <input type="text" id="phonenumber" name="phonenumber" placeholder="電話番号">
+
+                        <label for="subject">自由記入欄</label>
+                        <textarea id="subject" name="subject" style="height:200px"></textarea>
+                    
+                        <input class="submit" type="submit" value="送信する">
+                    </form>
+                </div>
+
+                <div class="home__social">
+                    <span class="home__social-follow">Follow Me</span>
+                    <div class="home__social-links">
+                        <a href="" class="home__social-link" target="_blank">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="home__social-link" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/Dkhuonghp" class="home__social-link" target="_blank">
+                            <i class="fa fa-github"></i>   
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
