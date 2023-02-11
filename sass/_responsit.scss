@@ -47,6 +47,15 @@
     .qualification__container .qualification__title::before {
       display: none;
     }
+    .education .qualification__container::after {
+      display: none;
+    }
+    .education .qualification__container::before {
+      display: none;
+    }
+    .education .qualification__container .qualification__title::before {
+      display: none;
+    }
     .app__work-portfolio .app__work-item {
       width: 125px;
       height: 150px;

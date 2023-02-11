@@ -47,7 +47,6 @@
                 <!-- Intro Stuff -->
                 <div class="intro-text">Welcome to my portfolio!</div>
                 <div class="arrow-svg-wrapper">
-                    <p>scroll</p>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"/></svg>
                 </div>
 
@@ -75,7 +74,7 @@
                 </div>
                 <div class="section-intro-wrapper pink-border">
                     <h1 class="section-title pink-text pink-border">
-                        <span class="section-title-text pink-text">About me</span>
+                        <span class="section-title-text pink-text">About Me</span>
                     </h1>
                 </div>
                 
@@ -108,12 +107,14 @@
             <div class="second-move section-margin"></div>
 
             <!--! Education -->
-            <section class="second-section section right">
+            <section class="education second-section section right">
+                <div class="about-pusheen">
+                    <img src="https://pusheen.com/wp-content/uploads/2019/02/Im-Busy.gif" alt="">
+                </div>
                 <div class="section-intro-wrapper">
                     <h1 class="section-title">
                         <span class="section-title-text pink">Education</span>
                     </h1>
-                    <span class="section-number pink">02</span>
                 </div>
 
                 <div class="qualification">
@@ -240,6 +241,9 @@
             <div class="second-move section-margin"></div>
             <!--! Skill -->
             <section class="skill section left">
+                <div class="about-pusheen">
+                    <img src="/img/cat-1.png" alt="">
+                </div>
                 <div class="section-intro-wrapper blue-text blue-border">
                     <h1 class="section-title blue-text blue-border">
                         <span class="section-title-text blue-text">Skill</span>
@@ -454,8 +458,11 @@
             </section>
             <div class="second-move section-margin"></div>
             <!-- ! Works -->
-            <section class="second-section section right">
+            <section class="work second-section section right">
 
+                <div class="about-pusheen">
+                    <img src="/img/cat-3.webp" alt="">
+                </div>
                 <div class="section-intro-wrapper">
                 <h1 class="section-title color-brown">
                     <span class="section-title-text color-brown">My Work</span>
@@ -469,46 +476,31 @@
 
             <div class="third-move section-margin"></div>
 
-            <section class="third-section section left">
-                <div class="section-intro-wrapper green-text green-border">
-                <h1 class="section-title green-text green-border">
-                    <span class="section-title-text green-text">Contact Me</span>
+            <section class="contact third-section section left">
+                <div class="about-pusheen">
+                    <img src="/img/cat-2.jpeg" alt="">
+                </div>
+                <div class="section-intro-wrapper">
+                <h1 class="section-title purple-text purple-border">
+                    <span class="section-title-text purple-text">Contact Me</span>
                 </h1>
-                <!-- <span class="section-number green-text">05</span> -->
                 </div>
                 <div class="container">
-                    <img src="https://pusheen.com/wp-content/uploads/2019/02/Im-Busy.gif" alt="">
-                    <form action="">
-                        <label for="fname">お問い合わせ内容</label>
-                        <input type="text" id="content" name="content" placeholder="お問い合わせ内容">
-                        <label for="fname">お名前</label>
-                        <input type="text" id="name" name="name" placeholder="お名前">
 
-                        <label for="lname">フリガナ</label>
-                        <input type="text" id="furigana" name="furigana" placeholder="フリガナ">
-
-                        <label for="country">性別</label>
-                        <select id="country" name="country">
-                            <option value="australia">男性</option>
-                            <option value="canada">女性</option>
-                            <option value="usa">回答なし</option>
-                        </select>
-
-                        <label for="fname">メールアドレス</label>
-                        <input type="text" id="mail" name="mail" placeholder="メールアドレス">
-
-                        <label for="lname">電話番号</label>
-                        <input type="text" id="phonenumber" name="phonenumber" placeholder="電話番号">
-
-                        <label for="subject">自由記入欄</label>
-                        <textarea id="subject" name="subject" style="height:200px"></textarea>
-                    
-                        <input class="submit" type="submit" value="送信する">
+                    <form class="cf">
+                        <div class="half left cf">
+                            <input type="text" id="input-name" placeholder="Name">
+                            <input type="email" id="input-email" placeholder="Email address">
+                            <input type="text" id="input-subject" placeholder="Subject">
+                        </div>
+                        <div class="half right cf">
+                            <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+                        </div>  
+                        <input type="submit" value="Submit" id="input-submit">
                     </form>
                 </div>
 
                 <div class="home__social">
-                    <span class="home__social-follow">Follow Me</span>
                     <div class="home__social-links">
                         <a href="" class="home__social-link" target="_blank">
                             <i class="fa fa-facebook-f"></i>

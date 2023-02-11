@@ -39,9 +39,9 @@ section {
         }
         .section-title{
             position: relative;
-            &.green-text.green-border{
-                color: var(--color-green);
-                border-bottom: 2px solid var(--color-green);
+            &.purple-text.purple-border{
+                color: var(--color-purple);
+                border-bottom: 2px solid var(--color-purple);
             }
             &.blue-text.blue-border{
                 color: var(--color-blue);
@@ -62,8 +62,8 @@ section {
                     border-bottom: 2px solid #f667c3;
                 }
                 
-                &.green-text{
-                    color: var(--color-green)
+                &.purple-text{
+                    color: var(--color-purple)
                 }
                 &.blue-text {
                     color: var(--color-blue);
@@ -90,6 +90,6 @@ section {
 .blue-background{
     background-color: var(--color-blue);
 }
-.green-background{
-    background-color: var(--color-green);
+.purple-background{
+    background-color: var(--color-purple);
 }

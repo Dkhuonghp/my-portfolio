@@ -1,77 +1,115 @@
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    outline: none;
-}
-  
-input[type=submit] {
-    background-color: var(--color-green);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 50%;
-}
-  
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-  
-.container {
-    border-radius: 5px;
-    padding: 20px;
-    margin: 30px 0;
-    img {
-        width: 100%;
-        height: auto;
+
+
+.contact {
+    .about-pusheen {
+        width: 90px;
+        top: 4rem;
+        left: 75%;
     }
-    .submit {
-        background-color: var(--color-green);
-        color: #fff;
-        margin: 0 auto;
-        padding: 10px 15px;
-        display: block;
-        text-align: center;
-        transition: .4s all;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
+    .container {
+        border-radius: 5px;
+        padding: 20px;
+        margin: 30px 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        form {
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+           
+           input, textarea {
+                border:0; outline:0;
+                border-radius: 5px;
+                padding: 1em;
+                display: block;
+                width: 100%;
+                margin-top: 1em;
+                font-family: 'Merriweather', sans-serif;
+                resize: none;
+                &:focus {
+                    box-shadow: 0 0 2px rgba(blue, 1);
+                }
+           }
+           
+           #input-submit {
+                color: white; 
+                background: var(--color-purple);
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    background: var(--color-blue);
+                }
+           }
+           
+           textarea {
+               height: 153px;
+           }
+        }
     }
+    
+    .home__social {
+        -webkit-column-gap: 3.5rem;
+        column-gap: 3.5rem;
+        display: flex;
+        justify-content: center;
+        .home__social-follow {
+            font-weight: medium;
+            position: relative;
+            &:after {
+                background: var(--color-purple);
+                content: "";
+                height: 2px;
+                position: absolute;
+                right: -45%;
+                top: 50%;
+                width: 1rem;
+            }
+        }
+        .home__social-links {
+            -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+            display: inline-flex;
+            .home__social-link {
+                color: var(--color-purple);
+                font-size: 1.5rem;
+                transition: .3s;
+                &:hover {
+                    transform: translateY(-10px);
+                    color: var(--color-blue);
+                }
+            }
+        }
+    }
+
 }
 
-.home__social {
-    align-items: center;
-    -webkit-column-gap: 3.5rem;
-    column-gap: 3.5rem;
-    display: flex;
-    color: var(--color-green);
-    .home__social-follow {
-        font-weight: medium;
-        position: relative;
-        &:after {
-            background: var(--color-green);
-            content: "";
-            height: 2px;
-            position: absolute;
-            right: -45%;
-            top: 50%;
-            width: 1rem;
-        }
-    }
-    .home__social-links {
-        -webkit-column-gap: 2rem;
-        column-gap: 2rem;
-        display: inline-flex;
-        .home__social-link {
-            color: var(--color-green);
-            font-size: 1.5rem;
-            
-        }
-    }
-}
+
+ 
+ 
+ .half {
+   float: left;
+   width: 48%;
+   height: 100%;
+   margin-bottom: 1em;
+ }
+ 
+ .right { width: 50%; }
+ 
+ .left {
+      margin-right: 2%; 
+ }
+ 
+ 
+ 
+ /* Clearfix */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }

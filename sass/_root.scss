@@ -28,10 +28,10 @@ svg{
 
 :root{
   /* Light Theme Variables */
-  --color-text-light: #333332;
-  --color-background-light: #FAF4E5;
+  --color-text-light: #000000;
+  --color-background-light: #fbf0e9;
   --color-pink-light: #e5a1aa;
-  --color-green-light: #7AD0AC;
+  --color-purple-light: #bd93f9;
   --color-blue-light: #9831c6;
 
 
@@ -44,7 +44,7 @@ svg{
   --color-text: var(--color-text-light);
   --color-background: var(--color-background-light);
   --color-pink: var(--color-pink-light);
-  --color-green: var(--color-green-light);
+  --color-purple: var(--color-purple-light);
   --color-blue: var(--color-blue-light);
   --color-brown: #e0af68;
 }
@@ -53,7 +53,7 @@ svg{
   --color-text: var(--color-text-dark);
   --color-background: var(--color-background-dark);
   --color-pink: var(--color-text-dark);
-  --color-green: var(--color-text-dark);
+  --color-purple: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
 }
 
@@ -71,16 +71,16 @@ svg{
     background-color: var(--color-blue);
 }
   
-.green-text{
-    color: var(--color-green)
+.purple-text{
+    color: var(--color-purple)
 }
   
-.green-border{
-    border-color: var(--color-green);
+.purple-border{
+    border-color: var(--color-purple);
 }
   
-.green-background{
-    background-color: var(--color-green);
+.purple-background{
+    background-color: var(--color-purple);
 }
 
 

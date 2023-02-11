@@ -1,4 +1,9 @@
 .skill {
+    .about-pusheen {
+        width: 80px;
+        top: 3rem;
+        left: 75%;
+    }
     .wrapper {
         font-size: 14px;
         background: #141523;
@@ -193,23 +198,16 @@
     .typed {
         border: 1px solid #bd93f9;
         margin: 0 6px;
-        animation: animate 0.7s infinite;
+        animation: animate 0.5s none infinite alternate;
     }
     
 }
-
 
 @keyframes animate {
     0% {
         opacity: 0;
     }
     100% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-    0% {
         opacity: 1;
     }
 }
