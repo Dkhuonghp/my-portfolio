@@ -1,8 +1,8 @@
 .education {
     .about-pusheen {
-        width: 90px;
+        width: 25%;
         position: relative;
-        top: 3.5rem;
+        top: 3rem;
         left: 75%;
     }
     .qualification__container {
@@ -17,6 +17,9 @@
             height: 100%;
         }
         .timeline {
+            &__text {
+                font-family: 'Roboto', sans-serif;
+            }
             &__title {
                 color: #bd93f9;
             }

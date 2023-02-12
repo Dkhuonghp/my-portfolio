@@ -10,9 +10,9 @@
   margin: 0 auto;
 }
 .about-pusheen {
-  width: 100px;
+  width: 25%;
   position: relative;
-  top: 3.7rem;
+  top: 3.3rem;
   left: 75%;
   img {
     width: 100%;
@@ -27,7 +27,7 @@
     top: 50%;
     left: 50%;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--color-text);
     transform: translate(-50%, -50%);
 }
@@ -52,11 +52,6 @@
       transform: translateY(8px)
     }
   }
-  
-
-
-
-
   
   .section-intro-wrapper:nth-child(3){
     border-bottom: 2px solid var(--color-green);
@@ -109,13 +104,14 @@
   padding: 20% 0;
   position: relative;
   img {
-    width: 100%;
+    border-radius: 5px;
   }
   .mt {
     margin-top: 18px;
   }
   .about-title {
     font-size: 14px;
+    font-family: 'Roboto', sans-serif;
   }
   .about-name {
     font-size: 32px;
@@ -123,6 +119,7 @@
     font-weight: 800;
   }
   .about-content {
+    font-family: 'Roboto', sans-serif;
     line-height: 28px;
     text-align: justify;
   }

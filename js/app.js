@@ -3,19 +3,19 @@ const works = document.querySelector('.works');
 const args = [
     {
         name: 'IT19',
-        img: '/img/work_1.svg',
+        img: '/img/works/work_1.svg',
         weblink:'https://it19.vercel.app/',
         github:'https://github.com/Dkhuonghp/it_19'
     },
     {
         name: 'Moment Memorie',
-        img: '/img/work_2.svg',
+        img: '/img/works/work_2.svg',
         weblink:'http://click.ecc.ac.jp/ecc/letanloc/Portfolio/work/Project_01/MomentMemorie/',
         github:'https://github.com/Dkhuonghp/MomentMemorie',
     },
     {
         name: 'Job World',
-        img: '/img/work_3.png',
+        img: '/img/works/work_3.png',
         weblink:'https://click.ecc.ac.jp/ecc/ndkhuong/Job_World/',
         github:'https://github.com/Dkhuonghp/Job_World'
     },
@@ -27,7 +27,7 @@ const args = [
     },
     {
         name: 'Travel',
-        img: '/img/work_8.png',
+        img: '/img/works/work_8.png',
         weblink:'https://friendly-beijinho-f2679f.netlify.app/',
         github:'https://github.com/Dkhuonghp/Travel',
     },

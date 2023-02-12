@@ -54,7 +54,7 @@ section {
                 z-index: 5;
                 color: var(--color-pink);
                 &.color-brown {
-                    color: #e0af68;
+                    color: var(--color-brown);
                     border-bottom: 2px solid var(--color-brown);
                 }
                 &.pink {

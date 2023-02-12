@@ -7,12 +7,9 @@
 }
 
 html, body{
-  font-family: "Roboto", sans-serif;
+  font-family: 'Wendy One', sans-serif;
 }
 
-/* body{
-  overflow: hidden;
-} */
 li, a {
   text-decoration: none;
   list-style: none;
@@ -33,6 +30,7 @@ svg{
   --color-pink-light: #e5a1aa;
   --color-purple-light: #bd93f9;
   --color-blue-light: #9831c6;
+  --color-brown-light: #e0af68;
 
 
   /* Dark Theme Variables */
@@ -46,7 +44,7 @@ svg{
   --color-pink: var(--color-pink-light);
   --color-purple: var(--color-purple-light);
   --color-blue: var(--color-blue-light);
-  --color-brown: #e0af68;
+  --color-brown: var(--color-brown-light);
 }
 
 .dark-theme{
@@ -55,6 +53,7 @@ svg{
   --color-pink: var(--color-text-dark);
   --color-purple: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
+  --color-brown: var(--color-text-dark);
 }
 
 /* Other colors override */
@@ -99,6 +98,11 @@ svg{
 
 .hidden{
   display: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
 }
 
 /* Preloader */
@@ -213,4 +217,3 @@ svg{
     transform: scaleY(1);
   }
 }
-

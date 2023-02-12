@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/img/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 
@@ -28,6 +33,9 @@
     </div>
 
     <div class="page" asscroll-container>
+        <div class="cursor">
+            <div class="cursor__point"></div>
+        </div>
         <div class="toggle-bar">
             <div class="pusheen-newsletter"></div>
             <div class="sun-wrapper">
@@ -45,7 +53,7 @@
             <section class="hero">
                 <div class="hero-wrapper">
                 <!-- Intro Stuff -->
-                <div class="intro-text">Welcome to my portfolio!</div>
+                <div class="intro-text">Welcome to my portfolio !</div>
                 <div class="arrow-svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"/></svg>
                 </div>
@@ -70,7 +78,7 @@
             <!--! About -->
             <section class="first-section section left">
                 <div class="about-pusheen">
-                    <img src="/img/about-pusheen.webp" alt="">
+                    <img src="/img/pusheen/pusheen-about.png" alt="">
                 </div>
                 <div class="section-intro-wrapper pink-border">
                     <h1 class="section-title pink-text pink-border">
@@ -109,7 +117,7 @@
             <!--! Education -->
             <section class="education second-section section right">
                 <div class="about-pusheen">
-                    <img src="https://pusheen.com/wp-content/uploads/2019/02/Im-Busy.gif" alt="">
+                    <img src="/img/pusheen/pusheen-education.png" alt="">
                 </div>
                 <div class="section-intro-wrapper">
                     <h1 class="section-title">
@@ -242,7 +250,7 @@
             <!--! Skill -->
             <section class="skill section left">
                 <div class="about-pusheen">
-                    <img src="/img/cat-1.png" alt="">
+                    <img src="/img/pusheen/pusheen-skill.png" alt="">
                 </div>
                 <div class="section-intro-wrapper blue-text blue-border">
                     <h1 class="section-title blue-text blue-border">
@@ -461,7 +469,7 @@
             <section class="work second-section section right">
 
                 <div class="about-pusheen">
-                    <img src="/img/cat-3.webp" alt="">
+                    <img src="/img/pusheen/pusheen-works.png" alt="">
                 </div>
                 <div class="section-intro-wrapper">
                 <h1 class="section-title color-brown">
@@ -478,7 +486,7 @@
 
             <section class="contact third-section section left">
                 <div class="about-pusheen">
-                    <img src="/img/cat-2.jpeg" alt="">
+                    <img src="/img/pusheen/pusheen-content.png" alt="">
                 </div>
                 <div class="section-intro-wrapper">
                 <h1 class="section-title purple-text purple-border">
@@ -516,7 +524,6 @@
             </section>
         </div>
     </div>
-
 
     <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/app.js"></script>
