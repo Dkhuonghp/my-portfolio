@@ -5,7 +5,8 @@
   box-sizing: border-box; }
 
 html, body {
-  font-family: 'Wendy One', sans-serif; }
+  font-family: 'Wendy One', sans-serif;
+  cursor: none; }
 
 li, a {
   text-decoration: none;
@@ -169,6 +170,38 @@ img {
     transform-origin: top center;
     transform: scaleY(1); }
 
+.cursor {
+  box-sizing: border-box;
+  width: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999999;
+  transform-origin: 50%;
+  transform: translate3d(-50%, -50%, 0); }
+  .cursor > div {
+    mix-blend-mode: exclusion; }
+  .cursor .cursor-follow {
+    transform-origin: 50%; }
+  .cursor svg {
+    display: block;
+    fill: none;
+    stroke: var(--color-purple);
+    stroke-width: 2;
+    stroke-miterlimit: miter; }
+
+.cursor-point {
+  position: fixed;
+  z-index: 999999;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-purple);
+  border-radius: 100%; }
+
 /* Toggle Bar --------------------------------------------- */
 .toggle-bar {
   position: fixed;
@@ -179,7 +212,7 @@ img {
   align-items: center;
   top: 48px;
   right: 48px;
-  z-index: 99999999999999; }
+  z-index: 100; }
   .toggle-bar .pusheen-newsletter {
     background: url(/img/cat.webp);
     pointer-events: none;
