@@ -147,22 +147,40 @@ img {
   height: 0;
   width: 12px;
   z-index: 9999;
-  .progress-bar-wrapper-left{
+  &.progress-bar-wrapper-left{
     position: absolute;
     top: 0;
     left: 0;
+    .progress-bar{
+      height: 100vh;
+      width: 100%;
+      background-color: var(--color-pink);
+      transform-origin: top center;
+      transform: scaleY(1);
+      &.blue-background {
+        background-color: var(--color-blue);
+      }
+      &.purple-background {
+        background-color: var(--color-purple);
+      }
+    }
   }
   
-  .progress-bar-wrapper-right{
+  &.progress-bar-wrapper-right{
     position: absolute;
     top: 0;
     right: 0;
-  }
-  .progress-bar{
-    height: 100vh;
-    width: 100%;
-    background-color: var(--color-pink);
-    transform-origin: top center;
-    transform: scaleY(1);
+    .progress-bar{
+      height: 100vh;
+      width: 100%;
+      transform-origin: top center;
+      transform: scaleY(1);
+      &.pink-background {
+        background-color: #f667c3;
+      }
+      &.brown-background {
+        background-color: var(--color-brown-light);
+      }
+    }
   }
 }

@@ -117,20 +117,33 @@ img {
   height: 0;
   width: 12px;
   z-index: 9999; }
-  .progress-wrapper .progress-bar-wrapper-left {
+  .progress-wrapper.progress-bar-wrapper-left {
     position: absolute;
     top: 0;
     left: 0; }
-  .progress-wrapper .progress-bar-wrapper-right {
+    .progress-wrapper.progress-bar-wrapper-left .progress-bar {
+      height: 100vh;
+      width: 100%;
+      background-color: var(--color-pink);
+      transform-origin: top center;
+      transform: scaleY(1); }
+      .progress-wrapper.progress-bar-wrapper-left .progress-bar.blue-background {
+        background-color: var(--color-blue); }
+      .progress-wrapper.progress-bar-wrapper-left .progress-bar.purple-background {
+        background-color: var(--color-purple); }
+  .progress-wrapper.progress-bar-wrapper-right {
     position: absolute;
     top: 0;
     right: 0; }
-  .progress-wrapper .progress-bar {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--color-pink);
-    transform-origin: top center;
-    transform: scaleY(1); }
+    .progress-wrapper.progress-bar-wrapper-right .progress-bar {
+      height: 100vh;
+      width: 100%;
+      transform-origin: top center;
+      transform: scaleY(1); }
+      .progress-wrapper.progress-bar-wrapper-right .progress-bar.pink-background {
+        background-color: #f667c3; }
+      .progress-wrapper.progress-bar-wrapper-right .progress-bar.brown-background {
+        background-color: var(--color-brown-light); }
 
 .preloader {
   background-color: var(--color-background-light);
@@ -533,7 +546,6 @@ section .section-detail-wrapper {
   color: #bd93f9; }
 
 .education .qualification__container .qualification__title {
-  margin: 10px 0;
   color: #f667c3; }
   .education .qualification__container .qualification__title::before {
     content: "";
@@ -541,12 +553,14 @@ section .section-detail-wrapper {
     position: absolute;
     z-index: 9;
     left: 24px;
-    transform: translateY(10px);
+    transform: translateY(12px);
     width: 10px;
     height: 10px;
     border: 2px solid #f667c3;
     background: #f667c3;
     border-radius: 50%; }
+    .education .qualification__container .qualification__title::before:hover {
+      transform: scale(2); }
     .education .qualification__container .qualification__title::before:nth-child(1) {
       top: 10%; }
 
@@ -566,63 +580,59 @@ section .section-detail-wrapper {
   background-image: url("https://readyplayer.me/images/home/glow-purple-01.svg");
   background-repeat: no-repeat;
   background-position: -50px 0,right bottom; }
-
-.skill .profile {
-  display: flex;
-  align-items: center;
-  padding: 60px 0;
-  position: relative; }
-
-.skill .iconWrap {
-  display: flex;
-  position: absolute;
-  top: 30px;
-  left: 2%; }
-  .skill .iconWrap .icon {
-    transition: .2s; }
-    .skill .iconWrap .icon:hover {
-      transform: scale(2); }
-  .skill .iconWrap .iconBtn1 {
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    background: #ef4444; }
-  .skill .iconWrap .iconBtn2 {
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    background: #f59e0b;
-    margin: 0 15px; }
-  .skill .iconWrap .iconBtn3 {
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    background: #2aca3e; }
-
-.skill .container-code {
-  font-family: Menlo, Monaco, "Courier New", monospace;
-  width: 100%;
-  z-index: 3; }
-
-.skill .codeWrap {
-  position: relative;
-  line-height: 1.7em;
-  width: 100%; }
-
-.skill .codeWrap:hover {
-  background: #2b2e3e;
-  cursor: default; }
-
-.skill .codeWrap::before {
-  content: attr(data-value);
-  position: absolute;
-  display: block;
-  width: 20px;
-  left: 1%;
-  margin: auto;
-  font-size: 14px;
-  text-align: center;
-  color: #6272a4; }
+  .skill .wrapper .profile {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    position: relative; }
+    .skill .wrapper .profile .iconWrap {
+      display: flex;
+      position: absolute;
+      top: 30px;
+      left: 2%; }
+      .skill .wrapper .profile .iconWrap .icon {
+        transition: .2s; }
+        .skill .wrapper .profile .iconWrap .icon:hover {
+          transform: scale(2); }
+      .skill .wrapper .profile .iconWrap .iconBtn1 {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background: #ef4444; }
+      .skill .wrapper .profile .iconWrap .iconBtn2 {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background: #f59e0b;
+        margin: 0 15px; }
+      .skill .wrapper .profile .iconWrap .iconBtn3 {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background: #2aca3e; }
+    .skill .wrapper .profile .container-code {
+      font-family: Menlo, Monaco, "Courier New", monospace;
+      width: 100%;
+      z-index: 3; }
+      .skill .wrapper .profile .container-code .codeWrap {
+        position: relative;
+        line-height: 1.7em;
+        width: 100%; }
+        .skill .wrapper .profile .container-code .codeWrap:hover {
+          background: #2b2e3e;
+          cursor: default; }
+          .skill .wrapper .profile .container-code .codeWrap:hover::before {
+            color: #c6c6c6; }
+        .skill .wrapper .profile .container-code .codeWrap::before {
+          content: attr(data-value);
+          position: absolute;
+          display: block;
+          width: 20px;
+          left: 1%;
+          margin: auto;
+          font-size: 14px;
+          text-align: center;
+          color: #6272a4; }
 
 .skill .brackets {
   color: white; }
@@ -652,20 +662,13 @@ section .section-detail-wrapper {
   margin-left: 6px; }
 
 .skill .code {
-  width: 1140px;
   margin: 0 auto; }
-
-.skill .code.left {
-  margin-left: 9%; }
-
-.skill .left_2 {
-  margin-left: 6%; }
-
-.skill .code.left-2 {
-  margin-left: 12%; }
-
-.skill .code.left-3 {
-  margin-left: 6%; }
+  .skill .code.left {
+    margin-left: 8%; }
+  .skill .code.left-2 {
+    margin-left: 10%; }
+  .skill .code.left-3 {
+    margin-left: 6%; }
 
 .skill .mtk1::after {
   content: '[';
@@ -721,7 +724,7 @@ section .section-detail-wrapper {
 .skill .typed {
   border: 1px solid #bd93f9;
   margin: 0 6px;
-  animation: animate 0.5s none infinite alternate; }
+  animation: animate 0.4s none infinite alternate; }
 
 @keyframes animate {
   0% {
