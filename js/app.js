@@ -38,7 +38,7 @@ const args = [
         github:'https://github.com/Dkhuonghp/my-portfolio',
     },
 ]
-
+//! Works
 const html = args.map(item => {
     return `
         <div class="app__work-portfolio">
@@ -70,12 +70,7 @@ const html = args.map(item => {
 })
 works.innerHTML = html.join('')
 
-const cursor = document.querySelector('.curosr-inner')
-
-cursor.onMouseDown = function () {
-    console.log(1);
-}
-
+//! Mouse animation
 class mouseFollow{
     constructor( classelem , classfollow , classinner ){
       this.elem = document.querySelector(classelem);
