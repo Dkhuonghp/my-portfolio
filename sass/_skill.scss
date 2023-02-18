@@ -7,7 +7,6 @@
     .wrapper {
         font-size: 14px;
         background: #141523;
-        // box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
         width: 100%;
         margin: 10% 0;
         position:relative;
@@ -23,10 +22,13 @@
             position: relative;
             
             .iconWrap {
+                width: 100%;
                 display: flex;
                 position: absolute;
-                top: 30px;
-                left: 2%;
+                top: 0;
+                box-shadow: 0 0 4px 0 var(--color-purple);
+                border-radius: 0.7rem 0.7rem 0 0;
+                padding: 14px 0 14px 2%;
                 .icon {
                     transition: .2s;
                     &:hover {
@@ -55,7 +57,7 @@
                 }
             }
             .container-code {
-                font-family: Menlo, Monaco, "Courier New", monospace;
+                font-family: 'Zen Maru Gothic', sans-serif;
                 width: 100%;
                 z-index: 3;
                 .codeWrap {

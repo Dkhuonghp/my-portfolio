@@ -1,11 +1,10 @@
-
-  /* Preloader Stuff */
-.animatedis{
-    display: inline-block;
-    transform: translateY(100%);
+/* Preloader Stuff */
+.animatedis {
+  display: inline-block;
+  transform: translateY(100%);
 }
 #mv-demo {
-  width: 400px ;
+  width: 400px;
   height: 400px;
   margin: 0 auto;
 }
@@ -19,86 +18,43 @@
     height: auto;
   }
 }
-.intro-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--color-text);
-    transform: translate(-50%, -50%);
+.intro-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-text);
+  transform: translate(-50%, -50%);
 }
-  
-  .arrow-svg-wrapper{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    opacity: 0;
-    text-align: center;
-    color: var(--color-text);
-    transform: translate(-50%, -50%);
-    animation: bounce 0.5s ease-in alternate infinite;
-  }
-  
-  @keyframes bounce {
-    0%{
-      transform: translateY(0)
-    }
-  
-    100%{
-      transform: translateY(8px)
-    }
-  }
-  
-  .section-intro-wrapper:nth-child(3){
-    border-bottom: 2px solid var(--color-green);
-  }
-  
 
-  
-  .section-heading{
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.8;
-    margin-top: 64px;
-    color: var(--color-text);
-  }
-  
-
-  
-
-  
-  
-  .styleOne,
-  .styleTwo,
-  .styleThree{
-    position: absolute;
-    display: block;
-    width: 100%;
-    max-width: 278px;
-    height: 60px;
-    border: 1px solid var(--color-pink);
-    transform-origin: left;
-    transform: skewY(-25deg);
-  }
-  
-  .styleOne{
-    top: 0px;
-  }
-  
-.styleTwo{
-    top: 80px;
+.arrow-svg-wrapper {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  opacity: 0;
+  text-align: center;
+  color: var(--color-text);
+  transform: translate(-50%, -50%);
+  animation: bounce 0.5s ease-in alternate infinite;
 }
-  
-.styleThree{
-    top: 80px;
-    transform: skewY(25deg);
-    background-color: var(--color-pink);
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(8px);
+  }
 }
-  
+
+.section-intro-wrapper:nth-child(3) {
+  border-bottom: 2px solid var(--color-green);
+}
 
 .about {
   padding: 20% 0;
@@ -111,7 +67,6 @@
   }
   .about-title {
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
   }
   .about-name {
     font-size: 32px;
@@ -119,11 +74,7 @@
     font-weight: 800;
   }
   .about-content {
-    font-family: 'Roboto', sans-serif;
     line-height: 28px;
     text-align: justify;
   }
 }
-
-
-
