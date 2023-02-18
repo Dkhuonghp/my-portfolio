@@ -5,8 +5,7 @@
   box-sizing: border-box; }
 
 html, body {
-  font-family: 'Wendy One', sans-serif;
-  cursor: none; }
+  font-family: 'Wendy One', sans-serif; }
 
 li, a {
   text-decoration: none;
@@ -249,23 +248,22 @@ img {
     mix-blend-mode: exclusion; }
   .cursor .cursor-follow {
     transform-origin: 50%; }
-  .cursor svg {
-    display: block;
-    fill: none;
-    stroke: var(--color-purple);
-    stroke-width: 2;
-    stroke-miterlimit: miter; }
-
-.cursor-point {
-  position: fixed;
-  z-index: 999999;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--color-purple);
-  border-radius: 100%; }
+    .cursor .cursor-follow svg {
+      display: block;
+      fill: none;
+      stroke: var(--color-purple);
+      stroke-width: 2;
+      stroke-miterlimit: miter; }
+  .cursor .cursor-point {
+    position: fixed;
+    z-index: 999999;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-purple);
+    border-radius: 100%; }
 
 /* Toggle Bar --------------------------------------------- */
 .toggle-bar {

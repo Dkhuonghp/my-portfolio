@@ -13,23 +13,23 @@
     }
     .cursor-follow{
         transform-origin: 50%;
+        svg{
+            display: block;
+            fill: none;
+            stroke: var(--color-purple);
+            stroke-width: 2;
+            stroke-miterlimit: miter;
+        }
     }
-    svg{
-        display: block;
-        fill: none;
-        stroke: var(--color-purple);
-        stroke-width: 2;
-        stroke-miterlimit: miter;
+    .cursor-point {
+        position: fixed;
+        z-index: 999999;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--color-purple);
+        border-radius: 100%;
     }
-}
-.cursor-point {
-    position: fixed;
-    z-index: 999999;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--color-purple);
-    border-radius: 100%;
 }
