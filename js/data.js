@@ -12,6 +12,24 @@ const args = [
         github:'https://github.com/Dkhuonghp/MomentMemorie',
     },
     {
+        name: 'Online Shop',
+        img: '/img/works/work_4.png',
+        weblink:'https://ecommerce-sanity-stripe-api.vercel.app/',
+        github:'https://github.com/Dkhuonghp/ecommerce_sanity_stripeAPI',
+    },
+    {
+        name: 'Typing Game',
+        img: '/img/works/work_5.png',
+        weblink:'https://ztype.vercel.app/',
+        github:'https://github.com/Dkhuonghp/ztype',
+    },
+    {
+        name: 'Astray Game',
+        img: '/img/works/work_7.png',
+        weblink:'https://astray-rho.vercel.app/',
+        github:'https://github.com/Dkhuonghp/Astray',
+    },
+    {
         name: 'Job World',
         img: '/img/works/work_3.png',
         weblink:'https://click.ecc.ac.jp/ecc/ndkhuong/Job_World/',
@@ -19,7 +37,7 @@ const args = [
     },
     {
         name: 'Notes',
-        img: 'https://is5-ssl.mzstatic.com/image/thumb/Purple112/v4/f0/e0/7e/f0e07e01-0a36-0ee3-edea-5f0e28cac5db/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/1200x600wa.png',
+        img: '/img/works/work_6.png',
         weblink:'https://note-app-dkhuonghp.vercel.app/',
         github:'https://github.com/Dkhuonghp/note-app',
     },
