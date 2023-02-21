@@ -56,10 +56,12 @@
     .education .qualification__container .qualification__title::before {
       display: none;
     }
-    .app__work-portfolio .app__work-item {
-      width: 125px;
-      height: 150px;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
+    // .app__work-portfolio {
+    //   .app__work-item {
+    //     width: 125px !important;
+    //     height: 150px !important;
+    //     text-align: center;
+    //     transition: all 0.3s ease;
+    //   }
+    // }
 }
