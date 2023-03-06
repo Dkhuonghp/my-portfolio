@@ -18,12 +18,6 @@ const args = [
         github:'https://github.com/Dkhuonghp/ecommerce_sanity_stripeAPI',
     },
     {
-        name: 'Typing Game',
-        img: '/img/works/work_5.png',
-        weblink:'https://ztype.vercel.app/',
-        github:'https://github.com/Dkhuonghp/ztype',
-    },
-    {
         name: 'Astray Game',
         img: '/img/works/work_7.png',
         weblink:'https://astray-rho.vercel.app/',
