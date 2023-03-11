@@ -127,36 +127,36 @@ export default class Controls {
                         invalidateOnRefresh: true,
                     },
                 })
-                    .to(
-                        this.room.position,
-                        {
-                            x: () => {
-                                return 1;
-                            },
-                            z: () => {
-                                return this.sizes.height * 0.0032;
-                            },
+                .to(
+                    this.room.position,
+                    {
+                        x: () => {
+                            return 1;
                         },
-                        "same"
-                    )
-                    .to(
-                        this.room.scale,
-                        {
-                            x: 0.4,
-                            y: 0.4,
-                            z: 0.4,
+                        z: () => {
+                            return this.sizes.height * 0.0032;
                         },
-                        "same"
-                    )
-                    .to(
-                        this.rectLight,
-                        {
-                            width: 0.5 * 4,
-                            height: 0.7 * 4,
-                        },
-                        "same"
-                    );
-
+                    },
+                    "same"
+                )
+                .to(
+                    this.room.scale,
+                    {
+                        x: 0.4,
+                        y: 0.4,
+                        z: 0.4,
+                    },
+                    "same"
+                )
+                .to(
+                    this.rectLight,
+                    {
+                        width: 0.5 * 4,
+                        height: 0.7 * 4,
+                    },
+                    "same"
+                );
+                
                 // Third section -----------------------------------------
                 this.thirdMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
@@ -166,9 +166,83 @@ export default class Controls {
                         scrub: 0.6,
                         invalidateOnRefresh: true,
                     },
+                })
+                .to(
+                    this.room.position,
+                    {
+                        z: () => {
+                            return this.sizes.height * 0.009;
+                        },
+                    },
+                    "same"
+                )
+                .to(
+                    this.room.scale,
+                    {
+                        x: 0.3,
+                        y: 0.3,
+                        z: 0.3,
+                    },
+                    "same"
+                )
+                .to(
+                    this.rectLight,
+                    {
+                        width: 0.5 * 4,
+                        height: 0.7 * 4,
+                    },
+                    "same"
+                );
+
+                // fourth section -----------------------------------------
+                this.fourthMoveTimeline = new GSAP.timeline({
+                    scrollTrigger: {
+                        trigger: ".fourth-move",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.6,
+                        invalidateOnRefresh: true,
+                    },
+                })
+                .to(
+                    this.room.position,
+                    {
+                        z: () => {
+                            return this.sizes.height * 0.009;
+                        },
+                    },
+                    "same"
+                )
+                .to(
+                    this.room.scale,
+                    {
+                        x: 0.4,
+                        y: 0.4,
+                        z: 0.4,
+                    },
+                    "same"
+                )
+                .to(
+                    this.rectLight,
+                    {
+                        width: 0.5 * 4,
+                        height: 0.7 * 4,
+                    },
+                    "same"
+                );
+
+                // Fifth section -----------------------------------------
+                this.fifthMoveTimeline = new GSAP.timeline({
+                    scrollTrigger: {
+                        trigger: ".fifth-move",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.6,
+                        invalidateOnRefresh: true,
+                    },
                 }).to(this.camera.orthographicCamera.position, {
-                    y: 1.5,
-                    x: -4.1,
+                    y: 0.3,
+                    x: -3.1,
                 });
             },
 
@@ -237,6 +311,73 @@ export default class Controls {
                 this.thirdMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".third-move",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.6,
+                        invalidateOnRefresh: true,
+                    },
+                })
+                .to(
+                    this.room.scale,
+                    {
+                        x: 0.25,
+                        y: 0.25,
+                        z: 0.25,
+                    },
+                    "same"
+                )
+                .to(
+                    this.room.position,
+                    {
+                        // x: 3.5,
+                        z: () => {
+                            return this.sizes.height * 0.009;
+                        },
+                    },
+                    "same"
+                );
+
+                // Fourth section -----------------------------------------
+                this.fourthMoveTimeline = new GSAP.timeline({
+                    scrollTrigger: {
+                        trigger: ".fourth-move",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.6,
+                        invalidateOnRefresh: true,
+                    },
+                })
+                .to(
+                    this.room.position,
+                    {
+                        z: () => {
+                            return this.sizes.height * 0.01;
+                        },
+                    },
+                    "same"
+                )
+                .to(
+                    this.room.scale,
+                    {
+                        x: 0.3,
+                        y: 0.3,
+                        z: 0.3,
+                    },
+                    "same"
+                )
+                .to(
+                    this.rectLight,
+                    {
+                        width: 0.5 * 4,
+                        height: 0.7 * 4,
+                    },
+                    "same"
+                );
+
+                // Fifth section -----------------------------------------
+                this.fifthMoveTimeline = new GSAP.timeline({
+                    scrollTrigger: {
+                        trigger: ".fifth-move",
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
@@ -348,10 +489,10 @@ export default class Controls {
                         "same"
                     );
 
-                // Third section -----------------------------------------
-                this.thirdCircle = new GSAP.timeline({
+                // Fifth section -----------------------------------------
+                this.fifthCircle = new GSAP.timeline({
                     scrollTrigger: {
-                        trigger: ".third-move",
+                        trigger: ".fifth-move",
                         start: "top top",
                         end: "bottom bottom",
                         scrub: 0.6,
@@ -360,12 +501,11 @@ export default class Controls {
                     x: 3,
                     y: 3,
                     z: 3,
-                });
-
+                })
                 // Mini Platform Animations
                 this.secondPartTimeline = new GSAP.timeline({
                     scrollTrigger: {
-                        trigger: ".third-move",
+                        trigger: ".fifth-move",
                         start: "center center",
                     },
                 });

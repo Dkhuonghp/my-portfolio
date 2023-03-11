@@ -42,5 +42,4 @@ const args = [
         github:'https://github.com/Dkhuonghp/Travel',
     },
 ]
-
-export default args
+export {args}
