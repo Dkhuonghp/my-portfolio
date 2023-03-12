@@ -87,16 +87,15 @@ export default class Controls {
 
     setScrollTrigger() {
         ScrollTrigger.matchMedia({
-            //Desktop
+            //! Desktop
             "(min-width: 969px)": () => {
-                // console.log("fired desktop");
-
                 this.room.scale.set(0.11, 0.11, 0.11);
                 this.rectLight.width = 0.5;
                 this.rectLight.height = 0.7;
                 this.camera.orthographicCamera.position.set(0, 6.5, 10);
                 this.room.position.set(0, 0, 0);
-                // First section -----------------------------------------
+
+                // About
                 this.firstMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".first-move",
@@ -117,7 +116,7 @@ export default class Controls {
                     }
                 );
 
-                // Second section -----------------------------------------
+                // Education
                 this.secondMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".second-move",
@@ -131,7 +130,7 @@ export default class Controls {
                     this.room.position,
                     {
                         x: () => {
-                            return 1;
+                            return 0;
                         },
                         z: () => {
                             return this.sizes.height * 0.0032;
@@ -157,7 +156,7 @@ export default class Controls {
                     "same"
                 );
                 
-                // Third section -----------------------------------------
+                // Skill
                 this.thirdMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".third-move",
@@ -194,7 +193,7 @@ export default class Controls {
                     "same"
                 );
 
-                // fourth section -----------------------------------------
+                // Works
                 this.fourthMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".fourth-move",
@@ -207,8 +206,11 @@ export default class Controls {
                 .to(
                     this.room.position,
                     {
+                        x: () => {
+                            return this.sizes.width * 0.0033;
+                        },
                         z: () => {
-                            return this.sizes.height * 0.009;
+                            return this.sizes.height * 0.01;
                         },
                     },
                     "same"
@@ -216,9 +218,8 @@ export default class Controls {
                 .to(
                     this.room.scale,
                     {
-                        x: 0.4,
-                        y: 0.4,
-                        z: 0.4,
+                        x: 0.9,
+                        y: 0.9,
                     },
                     "same"
                 )
@@ -231,7 +232,7 @@ export default class Controls {
                     "same"
                 );
 
-                // Fifth section -----------------------------------------
+                // Contact
                 this.fifthMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".fifth-move",
@@ -242,13 +243,20 @@ export default class Controls {
                     },
                 }).to(this.camera.orthographicCamera.position, {
                     y: 0.3,
-                    x: -3.1,
-                });
+                    x: 1.6,
+                })
+                .to(this.room.scale,
+                    {
+                        x: 0.3,
+                        y: 0.3,
+                        z: 0.3,
+                    },
+                    "same"
+                )
             },
 
-            // Mobile
+            //! Mobile
             "(max-width: 968px)": () => {
-                // console.log("fired mobile");
 
                 // Resets
                 this.room.scale.set(0.07, 0.07, 0.07);
@@ -257,7 +265,7 @@ export default class Controls {
                 this.rectLight.height = 0.4;
                 this.camera.orthographicCamera.position.set(0, 6.5, 10);
 
-                // First section -----------------------------------------
+                // About
                 this.firstMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".first-move",
@@ -272,7 +280,7 @@ export default class Controls {
                     z: 0.1,
                 });
 
-                // Second section -----------------------------------------
+                // Education
                 this.secondMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".second-move",
@@ -307,7 +315,7 @@ export default class Controls {
                         "same"
                     );
 
-                // Third section -----------------------------------------
+                // Skill
                 this.thirdMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".third-move",
@@ -337,7 +345,7 @@ export default class Controls {
                     "same"
                 );
 
-                // Fourth section -----------------------------------------
+                // Works
                 this.fourthMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".fourth-move",
@@ -374,7 +382,7 @@ export default class Controls {
                     "same"
                 );
 
-                // Fifth section -----------------------------------------
+                // Contact
                 this.fifthMoveTimeline = new GSAP.timeline({
                     scrollTrigger: {
                         trigger: ".fifth-move",
