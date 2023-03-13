@@ -218,8 +218,8 @@ export default class Controls {
                 .to(
                     this.room.scale,
                     {
-                        x: 0.9,
-                        y: 0.9,
+                        x: 0.8,
+                        y: 0.8,
                     },
                     "same"
                 )
