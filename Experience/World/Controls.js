@@ -426,6 +426,34 @@ export default class Controls {
                     y: 0.4,
                     z: 0.4,
                 })
+
+                this.sixthMoveTimeline = new GSAP.timeline({
+                    scrollTrigger: {
+                        trigger: ".sixth-move",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.6,
+                        invalidateOnRefresh: true,
+                    }
+                })
+                .to(this.room.position, {
+                    x: 0,
+                    y: 0,
+                    z: 0,
+                })
+                .to(this.room.scale, {
+                    x: 0.07,
+                    y: 0.07,
+                    z: 0.07
+                },
+                    "same"
+                )
+                .to(this.rectLight, {
+                        width: 0.3,
+                        height: 0.4,
+                },
+                    "same"
+                );
             },
 
             // all
