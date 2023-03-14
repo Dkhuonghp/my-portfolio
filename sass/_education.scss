@@ -47,6 +47,7 @@
             }
             .timeline-event-copy {
                 padding: 2em;
+                padding-right: 0;
                 position: relative;
                 top: -1.875em;
                 .timeline-title {
@@ -54,15 +55,20 @@
                     color: #f667c3;
                 }
                 .timeline-item {
+                    position: relative;
+                    top: 25px;
+                    &.pb {
+                        padding-bottom: 1.2em;
+                    }
                     .timeline-text {
                         font-family: 'Zen Maru Gothic', sans-serif;
                     }
-                    a {
-                          color: #16c2c4;
+                    .link {
+                        padding-top: 1.2em;
+                        a {
+                            color: #16c2c4;
+                        }
                     }
-                }
-                p:not(.timeline-event-thumbnail) {
-                    padding-bottom: 1.2em;
                 }
                 .timeline-event-thumbnail {
                     color: #bd93f9;

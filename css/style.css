@@ -641,17 +641,23 @@ section .section-detail-wrapper {
       background-color: #a83279; }
     .education .timeline .timeline-event .timeline-event-copy {
       padding: 2em;
+      padding-right: 0;
       position: relative;
       top: -1.875em; }
       .education .timeline .timeline-event .timeline-event-copy .timeline-title {
         font-size: 1.75em;
         color: #f667c3; }
-      .education .timeline .timeline-event .timeline-event-copy .timeline-item .timeline-text {
-        font-family: 'Zen Maru Gothic', sans-serif; }
-      .education .timeline .timeline-event .timeline-event-copy .timeline-item a {
-        color: #16c2c4; }
-      .education .timeline .timeline-event .timeline-event-copy p:not(.timeline-event-thumbnail) {
-        padding-bottom: 1.2em; }
+      .education .timeline .timeline-event .timeline-event-copy .timeline-item {
+        position: relative;
+        top: 25px; }
+        .education .timeline .timeline-event .timeline-event-copy .timeline-item.pb {
+          padding-bottom: 1.2em; }
+        .education .timeline .timeline-event .timeline-event-copy .timeline-item .timeline-text {
+          font-family: 'Zen Maru Gothic', sans-serif; }
+        .education .timeline .timeline-event .timeline-event-copy .timeline-item .link {
+          padding-top: 1.2em; }
+          .education .timeline .timeline-event .timeline-event-copy .timeline-item .link a {
+            color: #16c2c4; }
       .education .timeline .timeline-event .timeline-event-copy .timeline-event-thumbnail {
         color: #bd93f9; }
 
