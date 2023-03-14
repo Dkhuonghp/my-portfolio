@@ -5,48 +5,69 @@
         top: 3rem;
         left: 75%;
     }
-    .qualification__container {
-        &::after {
-            content: "";
-            display: block;
-            top: 0;
-            left: 30px;
+    .timeline {
+        margin: 4em auto;
+        position: relative;
+        max-width: 46em;
+        &:before {
+            background-color: #f667c3;
+            content: '';
+            margin-left: -1px;
             position: absolute;
-            border-left: 2px solid #f667c3;
-            z-index: 10;
+            top: 0;
+            width: 2px;
             height: 100%;
         }
-        .timeline {
-            &__text {
-                font-family: 'Zen Maru Gothic', sans-serif;
-            }
-            &__title {
-                color: #bd93f9;
-            }
-        }
-        .qualification__title {
-            color: #f667c3;
-            &::before {
-                content: "";
+        .timeline-event {
+            position: relative;
+            .timeline-event-icon {
+                -moz-transition: -moz-transform 0.2s ease-in;
+                -o-transition: -o-transform 0.2s ease-in;
+                -webkit-transition: -webkit-transform 0.2s ease-in;
+                transition: transform 0.2s ease-in;
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                background-color: #f667c3;
+                outline: 10px solid var(--color-background);
                 display: block;
+                margin: 0.5em 0.5em 0.5em -0.5em;
                 position: absolute;
-                z-index: 9;
-                left: 24px;
-                transform: translateY(12px);
-                width: 10px;
-                height: 10px;
-                border: 2px solid #f667c3;
-                background: #f667c3;
-                border-radius: 50%;
-                &:hover {
-                    transform: scale(2);
+                top: 0;
+                width: 1em;
+                height: 1em;  
+            }
+            &:hover .timeline-event-icon {
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                background-color: #a83279;
+            }
+            .timeline-event-copy {
+                padding: 2em;
+                position: relative;
+                top: -1.875em;
+                .timeline-title {
+                    font-size: 1.75em;
+                    color: #f667c3;
                 }
-                &:nth-child(1) {
-                    top: 10%;
+                .timeline-item {
+                    .timeline-text {
+                        font-family: 'Zen Maru Gothic', sans-serif;
+                    }
+                    a {
+                          color: #16c2c4;
+                    }
+                }
+                p:not(.timeline-event-thumbnail) {
+                    padding-bottom: 1.2em;
+                }
+                .timeline-event-thumbnail {
+                    color: #bd93f9;
                 }
             }
         }
     }
 }
-
-

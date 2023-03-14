@@ -9,8 +9,7 @@ html, body {
 
 li, a {
   text-decoration: none;
-  list-style: none;
-  color: #16c2c4; }
+  list-style: none; }
 
 h1,
 section,
@@ -603,40 +602,58 @@ section .section-detail-wrapper {
   top: 3rem;
   left: 75%; }
 
-.education .qualification__container::after {
-  content: "";
-  display: block;
-  top: 0;
-  left: 30px;
-  position: absolute;
-  border-left: 2px solid #f667c3;
-  z-index: 10;
-  height: 100%; }
-
-.education .qualification__container .timeline__text {
-  font-family: 'Zen Maru Gothic', sans-serif; }
-
-.education .qualification__container .timeline__title {
-  color: #bd93f9; }
-
-.education .qualification__container .qualification__title {
-  color: #f667c3; }
-  .education .qualification__container .qualification__title::before {
-    content: "";
-    display: block;
+.education .timeline {
+  margin: 4em auto;
+  position: relative;
+  max-width: 46em; }
+  .education .timeline:before {
+    background-color: #f667c3;
+    content: '';
+    margin-left: -1px;
     position: absolute;
-    z-index: 9;
-    left: 24px;
-    transform: translateY(12px);
-    width: 10px;
-    height: 10px;
-    border: 2px solid #f667c3;
-    background: #f667c3;
-    border-radius: 50%; }
-    .education .qualification__container .qualification__title::before:hover {
-      transform: scale(2); }
-    .education .qualification__container .qualification__title::before:nth-child(1) {
-      top: 10%; }
+    top: 0;
+    width: 2px;
+    height: 100%; }
+  .education .timeline .timeline-event {
+    position: relative; }
+    .education .timeline .timeline-event .timeline-event-icon {
+      -moz-transition: -moz-transform 0.2s ease-in;
+      -o-transition: -o-transform 0.2s ease-in;
+      -webkit-transition: -webkit-transform 0.2s ease-in;
+      transition: transform 0.2s ease-in;
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: #f667c3;
+      outline: 10px solid var(--color-background);
+      display: block;
+      margin: 0.5em 0.5em 0.5em -0.5em;
+      position: absolute;
+      top: 0;
+      width: 1em;
+      height: 1em; }
+    .education .timeline .timeline-event:hover .timeline-event-icon {
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      background-color: #a83279; }
+    .education .timeline .timeline-event .timeline-event-copy {
+      padding: 2em;
+      position: relative;
+      top: -1.875em; }
+      .education .timeline .timeline-event .timeline-event-copy .timeline-title {
+        font-size: 1.75em;
+        color: #f667c3; }
+      .education .timeline .timeline-event .timeline-event-copy .timeline-item .timeline-text {
+        font-family: 'Zen Maru Gothic', sans-serif; }
+      .education .timeline .timeline-event .timeline-event-copy .timeline-item a {
+        color: #16c2c4; }
+      .education .timeline .timeline-event .timeline-event-copy p:not(.timeline-event-thumbnail) {
+        padding-bottom: 1.2em; }
+      .education .timeline .timeline-event .timeline-event-copy .timeline-event-thumbnail {
+        color: #bd93f9; }
 
 .skill .about-pusheen {
   width: 25%;
@@ -846,7 +863,7 @@ section .section-detail-wrapper {
         position: relative;
         transition: all .3s; }
         .work .works .app__work-portfolio .app__work-item .app__work-img img {
-          width: 90%;
+          width: 80%;
           height: auto;
           border-radius: 0.5rem;
           object-fit: cover; }
@@ -1033,4 +1050,16 @@ section .section-detail-wrapper {
   .education .qualification__container::before {
     display: none; }
   .education .qualification__container .qualification__title::before {
-    display: none; } }
+    display: none; }
+  .app__work-portfolio .app__work-item {
+    width: 125px !important;
+    height: 150px !important;
+    padding: 0.5rem !important;
+    text-align: center;
+    transition: all 0.3s ease; }
+    .app__work-portfolio .app__work-item .app__work-img .app__work-hover div {
+      width: 40px !important;
+      height: 40px !important;
+      margin: 0 0.4rem !important; }
+    .app__work-portfolio .app__work-item .app__work-content h4 {
+      font-size: 10px !important; } }

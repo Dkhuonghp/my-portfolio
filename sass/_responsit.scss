@@ -56,12 +56,21 @@
     .education .qualification__container .qualification__title::before {
       display: none;
     }
-    // .app__work-portfolio {
-    //   .app__work-item {
-    //     width: 125px !important;
-    //     height: 150px !important;
-    //     text-align: center;
-    //     transition: all 0.3s ease;
-    //   }
-    // }
+    .app__work-portfolio {
+      .app__work-item {
+        width: 125px !important;
+        height: 150px !important;
+        padding: 0.5rem !important;
+        text-align: center;
+        transition: all 0.3s ease;
+        .app__work-img .app__work-hover div {
+          width: 40px !important;
+          height: 40px !important;
+          margin: 0 0.4rem !important;
+        }
+        .app__work-content h4 {
+          font-size: 10px !important;
+        }
+      }
+    }
 }
