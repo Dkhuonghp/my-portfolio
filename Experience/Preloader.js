@@ -56,12 +56,12 @@ export default class Preloader extends EventEmitter {
                         y: 1.4,
                         z: 1.4,
                         ease: "back.out(2.5)",
-                        duration: 0.7,
+                        duration: 0.5,
                     })
                     .to(this.room.position, {
                         x: -1,
                         ease: "power1.out",
-                        duration: 0.7,
+                        duration: 0.5,
                     });
             } else {
                 this.timeline
@@ -70,12 +70,12 @@ export default class Preloader extends EventEmitter {
                         y: 1.4,
                         z: 1.4,
                         ease: "back.out(2.5)",
-                        duration: 0.7,
+                        duration: 0.5,
                     })
                     .to(this.room.position, {
                         z: -1,
                         ease: "power1.out",
-                        duration: 0.7,
+                        duration: 0.5,
                     });
             }
             this.timeline
