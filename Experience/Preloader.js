@@ -301,7 +301,7 @@ export default class Preloader extends EventEmitter {
                         y: 1,
                         z: 1,
                         ease: "back.out(2.2)",
-                        duration: 0.5,
+                        duration: 1,
                     },
                     "chair"
                 )

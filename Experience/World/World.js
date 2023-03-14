@@ -22,17 +22,12 @@ export default class World extends EventEmitter {
             this.environment = new Environment();
             this.floor = new Floor();
             this.room = new Room();
-            // this.controls = new Controls();
             this.emit("worldready");
         });
 
         this.theme.on("switch", (theme) => {
             this.switchTheme(theme);
         });
-
-        // this.sizes.on("switchdevice", (device) => {
-        //     this.switchDevice(device);
-        // });
     }
 
     switchTheme(theme) {
@@ -40,12 +35,6 @@ export default class World extends EventEmitter {
             this.environment.switchTheme(theme);
         }
     }
-
-    // switchDevice(device) {
-    //     if (this.controls) {
-    //         this.controls.switchDevice(device);
-    //     }
-    // }
 
     resize() {}
 

@@ -147,6 +147,15 @@ img {
       .progress-wrapper.progress-bar-wrapper-right .progress-bar.brown-background {
         background-color: var(--color-brown-light); }
 
+footer {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  background-color: var(--color-background);
+  color: var(--color-purple);
+  letter-spacing: 1px; }
+
 .preloader {
   background-color: #e4ddea;
   width: 100%;
@@ -314,7 +323,7 @@ img {
       height: 20px;
       background-color: var(--color-background);
       transition: all 0.2s ease-in-out; }
-    .toggle-bar .toggle-button .toggle-button:hover .toggle-circle {
+    .toggle-bar .toggle-button:hover .toggle-circle {
       transform: scale(0.9); }
     .toggle-bar .toggle-button .slide {
       left: 40px; }

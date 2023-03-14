@@ -130,7 +130,7 @@ export default class Controls {
                     this.room.position,
                     {
                         x: () => {
-                            return 0;
+                            return 1;
                         },
                         z: () => {
                             return this.sizes.height * 0.0032;
@@ -207,7 +207,7 @@ export default class Controls {
                     this.room.position,
                     {
                         x: () => {
-                            return this.sizes.width * 0.0033;
+                            return 4
                         },
                         z: () => {
                             return this.sizes.height * 0.01;
@@ -242,8 +242,8 @@ export default class Controls {
                         invalidateOnRefresh: true,
                     },
                 }).to(this.camera.orthographicCamera.position, {
-                    y: 0.3,
                     x: 1.6,
+                    y: 0.3,
                 })
                 .to(this.room.scale,
                     {
@@ -253,6 +253,32 @@ export default class Controls {
                     },
                     "same"
                 )
+                this.sixthMoveTimeline = new GSAP.timeline({
+                    scrollTrigger: {
+                        trigger: ".sixth-move",
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.6,
+                        invalidateOnRefresh: true,
+                    }
+                })
+                .to(this.camera.orthographicCamera.position, {
+                    x: 4,
+                    y: 2,
+                })
+                .to(this.room.scale, {
+                    x: 0.13,
+                    y: 0.13,
+                    z: 0.13
+                },
+                    "same"
+                )
+                .to(this.rectLight, {
+                        width: 0.5,
+                        height: 0.7,
+                },
+                    "same"
+                );
             },
 
             //! Mobile
@@ -337,7 +363,6 @@ export default class Controls {
                 .to(
                     this.room.position,
                     {
-                        // x: 3.5,
                         z: () => {
                             return this.sizes.height * 0.009;
                         },
@@ -358,6 +383,9 @@ export default class Controls {
                 .to(
                     this.room.position,
                     {
+                        x: () => {
+                            return this.sizes.width * 0.01;
+                        },
                         z: () => {
                             return this.sizes.height * 0.01;
                         },
@@ -367,9 +395,8 @@ export default class Controls {
                 .to(
                     this.room.scale,
                     {
-                        x: 0.3,
-                        y: 0.3,
-                        z: 0.3,
+                        x: 0.5,
+                        y: 0.5,
                     },
                     "same"
                 )
@@ -393,7 +420,12 @@ export default class Controls {
                     },
                 }).to(this.room.position, {
                     z: -4.5,
-                });
+                })
+                .to(this.room.scale, {
+                    x: 0.4,
+                    y: 0.4,
+                    z: 0.4,
+                })
             },
 
             // all
