@@ -6,6 +6,10 @@
     left: 48px;
     width: 55px;
     opacity: 0;
+    &:hover .draw {
+        animation: draw 4s ease-in-out infinite;
+        stroke: #bd93f9;
+    }
 }
 
 /* Toggle Bar --------------------------------------------- */

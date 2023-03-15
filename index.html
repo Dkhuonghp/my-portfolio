@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Wendy+One&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <title>ndkhuong portfolio</title>
 </head>
 
-<body class="light-theme" id="body">
+<body class="light-theme">
 
     <div class="experience">
         <canvas class="experience-canvas"></canvas>
@@ -21,26 +22,7 @@
 
     <div class="preloader">
         <div class="preloader-wrapper">
-            <!-- <div class="wrapper">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="shadow"></div>
-                <div class="shadow"></div>
-                <div class="shadow"></div>
-            </div> -->
             <svg class="draw" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.31 70.99">
-                <defs>
-                  <style>
-                    .cls-1 {
-                      fill: #bd93f9;
-                    }
-              
-                    .cls-2 {
-                      fill: #caa9fa;
-                    }
-                  </style>
-                </defs>
                 <polygon class="cls-1" points="0 17.3 0 51.86 8.64 46.88 8.64 26.38 26.48 36.61 30.03 34.56 30.03 0 21.47 4.93 21.32 24.51 4.31 14.82 0 17.3"/>
                 <polygon class="cls-1" points="32.31 0 32.31 9.82 53.78 22.24 53.73 37.11 40.81 29.64 40.82 18.69 32.31 13.75 32.31 34.5 62.31 51.86 62.31 17.27 32.31 0"/>
                 <polygon class="cls-2" points="1.16 53.76 31.13 70.99 39.48 66.18 27.53 59.15 35.77 54.4 42.61 52.92 52.53 58.66 61.09 53.73 47.04 45.6 38.66 47.59 40.81 42 31.21 36.44 23.47 40.9 32.02 47.24 30.85 50.67 21.87 55.83 9.72 48.82 1.16 53.76"/>
@@ -49,8 +31,12 @@
     </div>
 
     <div class="page" asscroll-container>
-        <a class="logo" href="#body">
-            <img src="/img/logo.svg" alt="">
+        <a class="logo" href="#hero">
+            <svg class="draw" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.31 70.99">
+                <polygon class="cls-1" points="0 17.3 0 51.86 8.64 46.88 8.64 26.38 26.48 36.61 30.03 34.56 30.03 0 21.47 4.93 21.32 24.51 4.31 14.82 0 17.3"/>
+                <polygon class="cls-1" points="32.31 0 32.31 9.82 53.78 22.24 53.73 37.11 40.81 29.64 40.82 18.69 32.31 13.75 32.31 34.5 62.31 51.86 62.31 17.27 32.31 0"/>
+                <polygon class="cls-2" points="1.16 53.76 31.13 70.99 39.48 66.18 27.53 59.15 35.77 54.4 42.61 52.92 52.53 58.66 61.09 53.73 47.04 45.6 38.66 47.59 40.81 42 31.21 36.44 23.47 40.9 32.02 47.24 30.85 50.67 21.87 55.83 9.72 48.82 1.16 53.76"/>
+            </svg>
         </a>
         <div class="toggle-bar">
             <div class="pusheen-newsletter"></div>
@@ -66,7 +52,7 @@
         </div>
         
         <div class="page-wrapper" asscroll>
-            <section class="hero">
+            <section class="hero" id="hero">
                 <div class="hero-wrapper">
                     <div class="header-img-top">
                         <svg width="500" height="200" viewBox="0 0 375 105" fill="none" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -557,7 +543,7 @@
 
     <div class="cursor">
         <div class="cursor-follow">
-            <div class="curosr-inner">
+            <div class="cursor-inner">
                 <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="25" cy="25" r="22"/>
                 </svg>

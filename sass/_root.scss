@@ -186,6 +186,15 @@ img {
   }
 }
 
+// Logo Color
+.cls-1 {
+  fill: #bd93f9;
+}
+
+.cls-2 {
+  fill: #caa9fa;
+}
+
 footer {
   width: 100%;
   padding: 10px 0;
@@ -211,9 +220,7 @@ footer {
   rotate: 180deg;
 }
 #path {
-  animation-name: path;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation: path 3s infinite;
   animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 

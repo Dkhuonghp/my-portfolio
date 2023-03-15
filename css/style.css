@@ -146,6 +146,12 @@ img {
       .progress-wrapper.progress-bar-wrapper-right .progress-bar.brown-background {
         background-color: var(--color-brown-light); }
 
+.cls-1 {
+  fill: #bd93f9; }
+
+.cls-2 {
+  fill: #caa9fa; }
+
 footer {
   width: 100%;
   padding: 10px 0;
@@ -170,9 +176,7 @@ footer {
   rotate: 180deg; }
 
 #path {
-  animation-name: path;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation: path 3s infinite;
   animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
 @keyframes path {
@@ -258,6 +262,9 @@ footer {
   left: 48px;
   width: 55px;
   opacity: 0; }
+  .logo:hover .draw {
+    animation: draw 4s ease-in-out infinite;
+    stroke: #bd93f9; }
 
 /* Toggle Bar --------------------------------------------- */
 .toggle-bar {
