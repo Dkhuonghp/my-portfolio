@@ -42,7 +42,7 @@ export default class Preloader extends EventEmitter {
             this.timeline.set(".animatedis", { y: 0, yPercent: 100 });
             this.timeline.to(".preloader", {
                 opacity: 0,
-                delay: 2,
+                delay: 1,
                 onComplete: () => {
                     document
                         .querySelector(".preloader")
