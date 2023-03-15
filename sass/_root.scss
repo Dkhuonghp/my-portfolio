@@ -195,3 +195,38 @@ footer {
   color: var(--color-purple);
   letter-spacing: 1px;
 }
+
+.header-img-top {
+  width: 100%;
+  position: absolute;
+  top: -30px;
+  opacity: 1;
+}
+.header-img-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -53px;
+  right: 0;
+  opacity: 1;
+  rotate: 180deg;
+}
+#path {
+  animation-name: path;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+@keyframes path {
+  0% {
+     d: path('M109.502 78.8151C72.7977 114.24 21.2072 106.198 0 97.7493L0 0L375 0C352.467 18.6288 302.386 38.908 235.828 37.1978C152.631 35.0601 155.383 34.5334 109.502 78.8151Z');
+  }
+
+  50% {
+     d: path('M98.5 68.5C61.7953 103.925 21.2072 106.198 0 97.7493L0 -6.10352e-05L375 -6.10352e-05C352.467 18.6288 328.558 32.2102 262 30.5C178.803 28.3623 144.381 24.2183 98.5 68.5Z'); 
+  }
+  
+  100% {
+     d: path('M109.502 78.8151C72.7977 114.24 21.2072 106.198 0 97.7493L0 0L375 0C352.467 18.6288 302.386 38.908 235.828 37.1978C152.631 35.0601 155.383 34.5334 109.502 78.8151Z'); 
+  }
+}

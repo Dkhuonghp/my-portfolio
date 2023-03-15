@@ -1,3 +1,13 @@
+// Logo
+.logo {
+    position: fixed;
+    z-index: 100;
+    top: 20px;
+    left: 48px;
+    width: 55px;
+    opacity: 0;
+}
+
 /* Toggle Bar --------------------------------------------- */
 
 .toggle-bar{

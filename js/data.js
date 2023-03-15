@@ -41,5 +41,11 @@ const args = [
         weblink:'https://friendly-beijinho-f2679f.netlify.app/',
         github:'https://github.com/Dkhuonghp/Travel',
     },
+    {
+        name: 'Portfolio',
+        img: '/img/logo.svg',
+        weblink:'',
+        github:'',
+    },
 ]
 export {args}

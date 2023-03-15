@@ -42,7 +42,7 @@ export default class Preloader extends EventEmitter {
             this.timeline.set(".animatedis", { y: 0, yPercent: 100 });
             this.timeline.to(".preloader", {
                 opacity: 0,
-                delay: 1,
+                delay: 2,
                 onComplete: () => {
                     document
                         .querySelector(".preloader")
@@ -98,6 +98,14 @@ export default class Preloader extends EventEmitter {
                         onComplete: resolve,
                     },
                     "same"
+                )
+                .to(
+                    ".logo",
+                    {
+                        opacity: 1,
+                        onComplete: resolve,
+                    },
+                    "same"
                 );
         });
     }
@@ -106,7 +114,19 @@ export default class Preloader extends EventEmitter {
         return new Promise((resolve) => {
             this.secondTimeline = new GSAP.timeline();
 
-            this.secondTimeline
+            this.secondTimeline 
+                .to(
+                    ".header-img-top",
+                    {
+                        opacity: 0
+                    },
+                )
+                .to(
+                    ".header-img-bottom",
+                    {
+                        opacity: 0
+                    },
+                )
                 .to(
                     ".intro-text .animatedis",
                     {

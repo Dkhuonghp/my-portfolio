@@ -155,6 +155,34 @@ footer {
   color: var(--color-purple);
   letter-spacing: 1px; }
 
+.header-img-top {
+  width: 100%;
+  position: absolute;
+  top: -30px;
+  opacity: 1; }
+
+.header-img-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -53px;
+  right: 0;
+  opacity: 1;
+  rotate: 180deg; }
+
+#path {
+  animation-name: path;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+
+@keyframes path {
+  0% {
+    d: path("M109.502 78.8151C72.7977 114.24 21.2072 106.198 0 97.7493L0 0L375 0C352.467 18.6288 302.386 38.908 235.828 37.1978C152.631 35.0601 155.383 34.5334 109.502 78.8151Z"); }
+  50% {
+    d: path("M98.5 68.5C61.7953 103.925 21.2072 106.198 0 97.7493L0 -6.10352e-05L375 -6.10352e-05C352.467 18.6288 328.558 32.2102 262 30.5C178.803 28.3623 144.381 24.2183 98.5 68.5Z"); }
+  100% {
+    d: path("M109.502 78.8151C72.7977 114.24 21.2072 106.198 0 97.7493L0 0L375 0C352.467 18.6288 302.386 38.908 235.828 37.1978C152.631 35.0601 155.383 34.5334 109.502 78.8151Z"); } }
+
 .preloader {
   background-color: #e4ddea;
   width: 100%;
@@ -168,79 +196,29 @@ footer {
     align-items: center;
     width: 100%;
     height: 100%; }
-    .preloader .preloader-wrapper .wrapper {
-      width: 200px;
-      height: 60px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%); }
-      .preloader .preloader-wrapper .wrapper .circle {
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        border-radius: 50%;
-        background-color: var(--color-purple);
-        left: 15%;
-        transform-origin: 50%;
-        animation: circle .4s alternate infinite ease; }
-        .preloader .preloader-wrapper .wrapper .circle:nth-child(2) {
-          left: 45%;
-          animation-delay: .2s; }
-        .preloader .preloader-wrapper .wrapper .circle:nth-child(3) {
-          left: auto;
-          right: 15%;
-          animation-delay: .3s; }
-      .preloader .preloader-wrapper .wrapper .shadow {
-        width: 20px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: absolute;
-        top: 62px;
-        transform-origin: 50%;
-        z-index: -1;
-        left: 15%;
-        filter: blur(1px);
-        animation: shadow .4s alternate infinite ease; }
-        .preloader .preloader-wrapper .wrapper .shadow:nth-child(4) {
-          left: 45%;
-          animation-delay: .2s; }
-        .preloader .preloader-wrapper .wrapper .shadow:nth-child(5) {
-          left: auto;
-          right: 15%;
-          animation-delay: .3s; }
-      .preloader .preloader-wrapper .wrapper span {
-        position: absolute;
-        top: 75px;
-        font-family: 'Lato';
-        font-size: 20px;
-        letter-spacing: 12px;
-        color: #fff;
-        left: 15%; }
+    .preloader .preloader-wrapper svg {
+      width: 20%; }
+    .preloader .preloader-wrapper .draw {
+      animation: draw 4000ms ease-in-out infinite;
+      stroke: #bd93f9; }
 
-@keyframes circle {
+@keyframes draw {
   0% {
-    top: 60px;
-    height: 5px;
-    border-radius: 50px 50px 25px 25px;
-    transform: scaleX(1.7); }
-  40% {
-    height: 20px;
-    border-radius: 50%;
-    transform: scaleX(1); }
+    stroke-dasharray: 0 400;
+    stroke-dashoffset: 200;
+    fill-opacity: 0;
+    stroke-width: 1; }
+  37% {
+    stroke-dasharray: 200 0;
+    stroke-dashoffset: 200;
+    fill-opacity: 0;
+    stroke-width: 1; }
+  50% {
+    fill-opacity: 1;
+    stroke-width: 0; }
   100% {
-    top: 0%; } }
-
-@keyframes shadow {
-  0% {
-    transform: scaleX(1.5); }
-  40% {
-    transform: scaleX(1);
-    opacity: .7; }
-  100% {
-    transform: scaleX(0.2);
-    opacity: .4; } }
+    fill-opacity: 1;
+    stroke-width: 0; } }
 
 .cursor {
   box-sizing: border-box;
@@ -272,6 +250,14 @@ footer {
     transform: translate(-50%, -50%);
     background: var(--color-purple);
     border-radius: 100%; }
+
+.logo {
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  left: 48px;
+  width: 55px;
+  opacity: 0; }
 
 /* Toggle Bar --------------------------------------------- */
 .toggle-bar {
@@ -1068,4 +1054,6 @@ section .section-detail-wrapper {
       height: 40px !important;
       margin: 0 0.4rem !important; }
     .app__work-portfolio .app__work-item .app__work-content h4 {
-      font-size: 10px !important; } }
+      font-size: 10px !important; }
+  .logo {
+    opacity: 0 !important; } }
