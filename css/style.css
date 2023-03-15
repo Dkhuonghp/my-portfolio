@@ -631,7 +631,7 @@ section .section-detail-wrapper {
       position: relative;
       top: -1.875em; }
       .education .timeline .timeline-event .timeline-event-copy .timeline-title {
-        font-size: 1.75em;
+        font-size: 1.3em;
         color: #f667c3; }
       .education .timeline .timeline-event .timeline-event-copy .timeline-item {
         position: relative;
@@ -639,7 +639,8 @@ section .section-detail-wrapper {
         .education .timeline .timeline-event .timeline-event-copy .timeline-item.pb {
           padding-bottom: 1.2em; }
         .education .timeline .timeline-event .timeline-event-copy .timeline-item .timeline-text {
-          font-family: 'Zen Maru Gothic', sans-serif; }
+          font-family: 'Zen Maru Gothic', sans-serif;
+          color: var(--color-text); }
         .education .timeline .timeline-event .timeline-event-copy .timeline-item .link {
           padding-top: 1.2em; }
           .education .timeline .timeline-event .timeline-event-copy .timeline-item .link a {
