@@ -46,43 +46,14 @@
         <rect id="skills-header-rect" x="0" y="0" height="47" width="500" fill="#00b7ff" opacity=".15" mask="url(#skills-header-mask)" style="width: 500px;"></rect>
         <text x="71" y="25" class="about-header" font-size="18" font-weight="bold">SKILLS</text>
         <foreignObject x="0" y="60" width="506" height="340">
-            <div id="about-skills-container" class="about-container">
-            <div id="about-skills-render-container">
-            <div id="about-skill-container-0" class="row about-skill-container" style="opacity: 1;">
-                <span id="about-skill-span-0" class="about-skill-span">WebGL</span>
-                <div class="about-skill-bar-container">
-                    <div id="about-skill-bar-0" class="about-skill-bar" style="width: 60%;"></div>
-                </div>
-            </div>
-        
-            <div id="about-skill-container-1" class="row about-skill-container" style="opacity: 1;">
-                <span id="about-skill-span-1" class="about-skill-span">ReactJS</span>
-                <div class="about-skill-bar-container">
-                    <div id="about-skill-bar-1" class="about-skill-bar" style="width: 65%;"></div>
-                </div>
-            </div>
-        
-            <div id="about-skill-container-2" class="row about-skill-container" style="opacity: 1;">
-                <span id="about-skill-span-2" class="about-skill-span">JavaScript</span>
-                <div class="about-skill-bar-container">
-                    <div id="about-skill-bar-2" class="about-skill-bar" style="width: 85%;"></div>
-                </div>
-            </div>
-        
-            <div id="about-skill-container-3" class="row about-skill-container" style="opacity: 1;">
-                <span id="about-skill-span-3" class="about-skill-span">HTML + CSS</span>
-                <div class="about-skill-bar-container">
-                    <div id="about-skill-bar-3" class="about-skill-bar" style="width: 90%;"></div>
-                </div>
-            </div>
-            <div id="about-skill-container-4" class="row about-skill-container" style="opacity: 1;">
-                <span id="about-skill-span-4" class="about-skill-span">3D Modelling</span>
-                <div class="about-skill-bar-container">
-                    <div id="about-skill-bar-4" class="about-skill-bar" style="width: 60%;"></div>
-                </div>
-            </div>
-            </div>
-                <div id="about-others-render-container"></div>
+            <div class="about-content">
+                <p>
+                    私のアピールポイントは行動力と粘り強さです。
+                    専門学校へ入学した当初は、プログラミングの経験がなく全くできませんでした。 そこで、弱点を克服するために、 毎日課題の復習と他の言語化にチャレンジし、 放課後先生に教えていただいたり、ネット等を活用して 自習勉強をした結果、 小さなアプリや色々なWebサイトを作成することができるようになりました。
+                    今では自分の作りたいものを形にできるプログラミングが特に好きです。
+                    Webサイトの構築を中心に知識を広げたり、フロントエンド開発で実装の経験を重ねて技術を磨きたいと思っており、 フロントと関わりのある技術も、自主的に勉強しています。
+                    貴社入社後も、新しい技術や知識を積極的に身に付け、業務に活かしていきます。
+                </p>
             </div>
         </foreignObject>
     </g>

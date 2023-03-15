@@ -34,32 +34,28 @@ section {
 
     .section-intro-wrapper{
         position: relative;
-        &.pink-border {
-            border-bottom: 2px solid var(--color-pink);
-        }
         .section-title{
             position: relative;
-            &.purple-text.purple-border{
-                color: var(--color-purple);
-                border-bottom: 2px solid var(--color-purple);
-            }
-            &.blue-text.blue-border{
-                color: var(--color-blue);
-                border-bottom: 2px solid var(--color-blue);
-            }
-            .section-title-text {
+            .secHead {
+                position: relative;
                 display: block;
-                font-size: 40px;
+                font-size: 2.125rem;
                 font-weight: 500;
+                padding: 3.75rem 0;
                 z-index: 5;
                 color: var(--color-pink);
+                left: -2rem;
+                &::before {
+                    content: '<';
+                }
+                &::after {
+                    content: '>';
+                }
                 &.color-brown {
                     color: var(--color-brown);
-                    border-bottom: 2px solid var(--color-brown);
                 }
                 &.pink {
                     color: #f667c3;
-                    border-bottom: 2px solid #f667c3;
                 }
                 
                 &.purple-text{
@@ -69,6 +65,31 @@ section {
                     color: var(--color-blue);
                 }
                 
+            }
+            .secEnd {
+                position: relative;
+                display: block;
+                font-size: 2.125rem;
+                font-weight: 500;
+                padding: 3.75rem 0;
+                z-index: 5;
+                color: var(--color-pink);
+                left: -2rem;
+                &.color-brown {
+                    color: var(--color-brown);
+                }
+                &.pink {
+                    color: #f667c3;
+                }
+                &.purple-text{
+                    color: var(--color-purple)
+                }
+                &.blue-text {
+                    color: var(--color-blue);
+                }
+                &::after {
+                    content: '</' attr(data-text) '>';
+                }
             }
         }
         .section-number{

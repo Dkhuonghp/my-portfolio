@@ -1,7 +1,7 @@
 .work {
     .about-pusheen {
         width: 25%;
-        top: 2.5rem;
+        top: 7rem;
         left: 75%;
     }
     .app__works {
@@ -14,13 +14,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 24px;
         .app__work-portfolio {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-        
             .app__work-item {
                 width: 190px;
                 height: 230px;
