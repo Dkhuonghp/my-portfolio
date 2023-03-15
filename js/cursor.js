@@ -87,13 +87,13 @@ export default function cursor() {
   
     //atag
     let cursorAnimeOver = ()=>{
-        let _p = document.querySelector('.curosr-inner svg');
+        let _p = document.querySelector('.cursor-inner svg');
         let _g = _p.querySelector('circle');
         gsap.to(_p , 0.5 , { scale: 2 })
         gsap.fromTo(_g , 0.6 , {drawSVG: "0 0"} , { drawSVG: "0 100%" })
     }
     let cursorAnimeOut = ()=>{
-        let _p = document.querySelector('.curosr-inner svg');
+        let _p = document.querySelector('.cursor-inner svg');
         let _g = _p.querySelector('circle');
         gsap.to(_p , 0.5 , { scale: 1 })
     }
@@ -106,7 +106,7 @@ export default function cursor() {
   
     document.addEventListener("DOMContentLoaded", function (event) {
         
-        let iii = new mouseFollow('.cursor' ,  '.cursor-follow' ,  '.curosr-inner');
+        let iii = new mouseFollow('.cursor' ,  '.cursor-follow' ,  '.cursor-inner');
 
         const loop = ()=> {
             let animation = window.requestAnimationFrame(loop);
