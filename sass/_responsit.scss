@@ -76,4 +76,43 @@
     .logo {
       opacity: 0 !important
     }
+    .progress-bar {
+      opacity: 0 !important;
+    }
+    .avatar {
+      margin: 0 !important;
+    }
+    .secHead, .secEnd {
+      padding: 1.75rem 0 !important;
+      left: 0 !important;
+    }
+    .toggle-bar {
+      right: 10px !important;
+    }
+    .ticket {
+      display: none !important;
+    }
+    .ticket-in {
+      width: 100% !important;
+      position: relative !important;
+      top: 0 !important;
+      left: 50%;
+      transform: translate(-50%, 0);
+      padding: 10px;
+      img {
+        display: none;
+      }
+      .pass {
+        top: 0 !important; 
+        left: 0 !important; 
+        width: 100% !important; 
+        margin: 0 !important;
+      }
+      .content {
+        margin: 0 !important;
+        .card-item {
+          margin-top: 1.25rem !important;
+        }
+      }
+    }
 }

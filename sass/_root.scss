@@ -30,7 +30,7 @@ svg{
   --color-purple-light: #bd93f9;
   --color-blue-light: #9831c6;
   --color-brown-light: #e0af68;
-
+  --color-red-brown: #a52958;
 
   /* Dark Theme Variables */
   --color-text-dark: #FAF4E5;
@@ -44,6 +44,7 @@ svg{
   --color-purple: var(--color-purple-light);
   --color-blue: var(--color-blue-light);
   --color-brown: var(--color-brown-light);
+  --color-redBown: var(--color-red-brown);
 }
 
 .dark-theme{
@@ -53,6 +54,7 @@ svg{
   --color-purple: var(--color-text-dark);
   --color-blue: var(--color-text-dark);
   --color-brown: var(--color-text-dark);
+  --color-redBown: var(--color-text-dark);
 }
 
 /* Other colors override */
@@ -83,6 +85,25 @@ svg{
 
 .zen-maru {
   font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* Preloader Stuff */
+.animatedis {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.intro-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--color-text);
+  transform: translate(-50%, -50%);
 }
 
 /* Experience --------------------------------------------- */
@@ -155,7 +176,7 @@ img {
     .progress-bar{
       height: 100vh;
       width: 100%;
-      background-color: var(--color-pink);
+      background-color: var(--color-redBown);
       transform-origin: top center;
       transform: scaleY(1);
       &.blue-background {

@@ -117,3 +117,9 @@ export default function cursor() {
 }
 
 cursor()
+
+const ticket = document.querySelector('.ticket')
+const ticketIn = document.querySelector('.ticket-in')
+ticket.addEventListener('click', function() {
+    ticketIn.classList.toggle('active');
+});
