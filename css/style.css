@@ -578,7 +578,7 @@ section .section-detail-wrapper {
     position: absolute;
     background: #a52958;
     top: 10px;
-    right: calc(50% - 250px);
+    right: calc(50% - 280px);
     z-index: 1;
     border-radius: 10px;
     transition: right .6s; }
