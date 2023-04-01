@@ -56,7 +56,10 @@ svg{
   --color-brown: var(--color-text-dark);
   --color-redBown: var(--color-text-dark);
 }
-
+*::selection {
+	background: #bd93f9;
+	color: white;
+}
 /* Other colors override */
   
 .blue-text{
